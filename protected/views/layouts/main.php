@@ -1,59 +1,57 @@
 <?php /* @var $this Controller */ ?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
-<head>
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-	<meta name="language" content="en" />
+<?php $base_url = Yii::app()->request->baseUrl; ?>
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="language" content="en" />
+        <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+        <title>Animated DataBase Courseware - <?php echo CHtml::encode($this->pageTitle); ?></title>
+        <link rel="stylesheet" type="text/css" href="<?php echo $base_url; ?>/css/adbc.css" media="screen,projection" />
+        <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon" />
+    </head>
+    <body>
+        <div id="submenuBar"></div>
+        <div id="main">
+            <div id="header">
+                <div id="adbclogo">
+                    <a href="/"><img src="/images/adbc.png" alt="ADbC logo" title="ADbC logo" hspace="0" vspace="0" border="0"></a>
+                </div>
+                <div id="headerText">
+                    <div id="headerTitle" class="larger bold">Animated DataBase Courseware</div>
+                    <div id="headerSubtitle" class="large bold">Interactive Approach for Teaching the Principles of DataBase Concepts</div>
+                    <div class="smalltext"></div>
+                    <div class="clear"></div>
+                </div>
+                <div class="clear"></div>
+            </div>
+            <div class="clear"></div>
 
-	<!-- blueprint CSS framework -->
-	<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/screen.css" media="screen, projection" />
-	<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/print.css" media="print" />
-	<!--[if lt IE 8]>
-	<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/ie.css" media="screen, projection" />
-	<![endif]-->
+            <div id="Menu">
+                <div id="mainmenu">
+                    <?php $this->widget('zii.widgets.CMenu',array(
+                        'htmlOptions'=>array(
+                            'class'=>'inline-menu',
+                        ),
+                        'activeCssClass'=>'selected',
+                        'items'=>array(
+                            array('label'=>'Database Design', 'url'=>array('/design')),
+                            array('label'=>'SQL', 'url'=>array('/sql')),
+                            array('label'=>'Transactions', 'url'=>array('/transactions')),
+                            array('label'=>'Security', 'url'=>array('/security')),
+                            array('label'=>'Info', 'url'=>array('/info')),
+                        ),
+                    )); ?>
+                </div>
+                <div id="submenu"></div>
+            </div>
 
-	<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/main.css" />
-	<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/form.css" />
+            <?php echo $content; ?>
 
-	<title><?php echo CHtml::encode($this->pageTitle); ?></title>
-</head>
-
-<body>
-
-<div class="container" id="page">
-
-	<div id="header">
-		<div id="logo"><?php echo CHtml::encode(Yii::app()->name); ?></div>
-	</div><!-- header -->
-
-	<div id="mainmenu">
-		<?php $this->widget('zii.widgets.CMenu',array(
-			'items'=>array(
-				array('label'=>'Home', 'url'=>array('/site/index')),
-				array('label'=>'About', 'url'=>array('/site/page', 'view'=>'about')),
-				array('label'=>'Contact', 'url'=>array('/site/contact')),
-				array('label'=>'Login', 'url'=>array('/site/login'), 'visible'=>Yii::app()->user->isGuest),
-				array('label'=>'Logout ('.Yii::app()->user->name.')', 'url'=>array('/site/logout'), 'visible'=>!Yii::app()->user->isGuest)
-			),
-		)); ?>
-	</div><!-- mainmenu -->
-	<?php if(isset($this->breadcrumbs)):?>
-		<?php $this->widget('zii.widgets.CBreadcrumbs', array(
-			'links'=>$this->breadcrumbs,
-		)); ?><!-- breadcrumbs -->
-	<?php endif?>
-
-	<?php echo $content; ?>
-
-	<div class="clear"></div>
-
-	<div id="footer">
-		Copyright &copy; <?php echo date('Y'); ?> by My Company.<br/>
-		All Rights Reserved.<br/>
-		<?php echo Yii::powered(); ?>
-	</div><!-- footer -->
-
-</div><!-- page -->
-
-</body>
+            <div id="nsfinfo">
+                <div id="nsfText">Funded by NSF Grant #0717707</div>
+                <div id="nsfLogo"></div>
+            </div>
+            <div class="clear"></div>
+        </div>
+    </body>
 </html>

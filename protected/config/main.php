@@ -25,10 +25,6 @@ return array(
             // Disable ipFilters, or use: 'ipFilters'=>array('YOUR_IP_ADDR','::1'),
             'ipFilters'=>false,
 		),
-        'design',
-        'sql',
-        'transactions',
-        'security',
 	),
 
 	// application components

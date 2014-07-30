@@ -28,21 +28,30 @@
 
             <div id="Menu">
                 <div id="mainmenu">
-                    <?php $this->widget('zii.widgets.CMenu',array(
-                        'htmlOptions'=>array(
-                            'class'=>'inline-menu',
-                        ),
-                        'activeCssClass'=>'selected',
-                        'items'=>array(
-                            array('label'=>'Database Design', 'url'=>array('/design')),
-                            array('label'=>'SQL', 'url'=>array('/sql')),
-                            array('label'=>'Transactions', 'url'=>array('/transactions')),
-                            array('label'=>'Security', 'url'=>array('/security')),
-                            array('label'=>'Info', 'url'=>array('/info')),
-                        ),
-                    )); ?>
+                    <?php
+                        $this->widget('zii.widgets.CMenu',array(
+                            'htmlOptions'=>array(
+                                'class'=>'inline-menu',
+                            ),
+                            'activeCssClass'=>'selected',
+                            'items'=>$this->menu,
+                        ));
+                    ?>
                 </div>
-                <div id="submenu"></div>
+                <div id="submenu">
+                    <?php
+                        if (!empty($this->submenu))
+                        {
+                            $this->widget('zii.widgets.CMenu',array(
+                                'htmlOptions'=>array(
+                                    'class'=>'inline-menu',
+                                ),
+                                'activeCssClass'=>'submenuSelected',
+                                'items'=>$this->submenu,
+                            ));
+                        }
+                    ?>
+                </div>
             </div>
 
             <?php echo $content; ?>

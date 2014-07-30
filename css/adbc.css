@@ -1,212 +1,244 @@
-body{
-    background-color:#8C7D84;
-    background-image:url(/images/BG_tile.png);
-    font-family:Helvetica, Arial, sans-serif;
-    font-size:smaller;
+/* line 2, scss/_base.scss */
+body {
+  background-color: #8C7D84;
+  background-image: url(/images/BG_tile.png);
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: smaller;
 }
 
-#main{
-    display:block;
-    zoom:1;
-    width:1033px;
-    margin:0px auto;
-    display:block;
-    background-color:White;
+/* line 2, scss/_layout.scss */
+#main {
+  display: block;
+  zoom: 1;
+  width: 1033px;
+  margin: 0px auto;
+  background-color: #fff;
 }
 
-#header{
-    position:relative;
-    padding:0px;
-    margin:0px;
+/* line 11, scss/_layout.scss */
+#contentWindowContainer {
+  position: relative;
+  padding: 5px;
+  background-color: #fff;
+  text-align: center;
+  height: 100%;
 }
 
-#adbclogo{
-    display:inline-block;
-    margin:32px 0px 0px 26px;
-    *display:inline;
-    zoom:1;
-    overflow:hidden;
+/* line 2, scss/_header.scss */
+#header {
+  position: relative;
+  padding: 0px;
+  margin: 0px;
 }
 
-#headerText{
-    display:inline-block;
-    *display:inline;
-    position:relative;
-    top:-40px;
-    margin:11px;
-    zoom:1;
+/* line 9, scss/_header.scss */
+#adbclogo {
+  display: inline-block;
+  margin: 32px 0px 0px 26px;
+  *display: inline;
+  zoom: 1;
+  overflow: hidden;
 }
 
-#headerTitle{
-    *font-size:22pt;
-    color:#15918E;
+/* line 18, scss/_header.scss */
+#headerText {
+  display: inline-block;
+  *display: inline;
+  position: relative;
+  top: -40px;
+  margin: 11px;
+  zoom: 1;
 }
 
-#headerSubtitle{
-    color:#A99138;
+/* line 28, scss/_header.scss */
+#headerTitle {
+  *font-size: 22pt;
+  color: #15918E;
 }
 
-#mainmenu{
-    margin:-4px 0px 0px 0px;
-    padding:0px;
-    height:40px;
+/* line 34, scss/_header.scss */
+#headerSubtitle {
+  color: #A99138;
 }
 
-#mainmenu ul li{
-    padding:6px 7px 9px 7px;
+/* line 2, scss/_nav.scss */
+#mainmenu {
+  margin: -4px 0px 0px 0px;
+  padding: 0px;
+  height: 40px;
 }
 
-#mainmenu a{
-    Color:Black;
-    text-decoration:none;
-    text-transform:uppercase;
+/* line 9, scss/_nav.scss */
+#mainmenu ul li {
+  padding: 6px 7px 9px 7px;
 }
 
-.selected{
-    background-color:#FBB03B;
+/* line 14, scss/_nav.scss */
+#mainmenu a {
+  Color: #000;
+  text-decoration: none;
+  text-transform: uppercase;
 }
 
-#submenuBar{
-    position:absolute;
-    top:210px;
-    width:98.5%;
-    background-color:Black;
-    height:39px;
-    z-index:1;
+/* line 21, scss/_nav.scss */
+#submenuBar {
+  position: absolute;
+  top: 210px;
+  width: 98.5%;
+  background-color: Black;
+  height: 39px;
+  z-index: 1;
 }
 
-#submenu{
-    position:relative;
-    width:100%;
-    z-index:100;
-    color:#CCF9F8;
-    height:39px;
+/* line 31, scss/_nav.scss */
+#submenu {
+  position: relative;
+  width: 100%;
+  z-index: 100;
+  color: #CCF9F8;
+  height: 39px;
 }
 
-#submenu a{
-    text-decoration:none;
-    text-transform:uppercase;
-    color:#CCF9F8;
-    padding:4px;
+/* line 40, scss/_nav.scss */
+#submenu a {
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #CCF9F8;
+  padding: 4px;
 }
 
-#submenu ul li{
-    position:relative;
-    top:-3px;
+/* line 48, scss/_nav.scss */
+#submenu ul li {
+  position: relative;
+  top: -3px;
 }
 
-#contentWindowContainer{
-    position:relative;
-    padding:5px;
-    background-color:White;
-    text-align:center;
-    height:100%;
+/* line 54, scss/_nav.scss */
+ul.inline-menu {
+  *position: relative;
+  *top: 12px;
+  *display: inline;
+  zoom: 1;
+  list-style-type: none;
+  white-space: nowrap;
+  margin: 0px;
 }
 
-ul.inline-menu{
-    *position:relative;
-    *top:12px;
-    *display:inline;
-    zoom:1;
-    list-style-type:none;
-    white-space:nowrap;
-    margin:0px;
-    
+/* line 66, scss/_nav.scss */
+ul.inline-menu li {
+  *float: left;
+  *display: inline;
+  display: inline-block;
+  margin: 0px 10px 0px 0px;
+  zoom: 1;
 }
 
-ul.inline-menu li{
-    *float:left;
-    *display:inline;
-    display:inline-block;
-    margin:0px 10px 0px 0px;
-    zoom:1;
+/* line 75, scss/_nav.scss */
+.submenuSelected {
+  background-color: #15918E;
 }
 
-.larger{
-    font-size:xx-large;
+/* line 80, scss/_nav.scss */
+.submenuSpacer {
+  position: relative;
+  display: inline-block;
+  *display: inline;
+  Margin: 0px 10px 0px 0px;
+  width: 1px;
+  height: 16px;
+  background-image: url(/images/Margin.bmp);
 }
 
-.large{
-    font-size:larger;
+/* line 1, scss/_nsf.scss */
+#nsfinfo {
+  float: right;
+  margin: 9px 9px 16px 0px;
 }
 
-.white{
-    color:White;
+/* line 6, scss/_nsf.scss */
+#nsfText {
+  margin: 15px 5px 0px 9px;
+  float: right;
 }
 
-.bold{
-    font-weight:bolder;
+/* line 11, scss/_nsf.scss */
+#nsfLogo {
+  display: inline-block;
+  *display: inline;
+  width: 48px;
+  Height: 48px;
+  background-image: url(/images/BW_small_NSF.png);
+  background-repeat: no-repeat;
 }
 
-.clear{
-    clear:all;
+/* line 2, scss/_state.scss */
+.clear {
+  clear: both;
 }
 
-.icon{
-    display:inline-block;
-    position:relative;
-    width:32px;
-    height:32px;
+/* line 7, scss/_state.scss */
+.selected {
+  background-color: #FBB03B;
 }
 
-.download{
-    background-image:url("images/download.png");
+/* line 12, scss/_state.scss */
+.larger {
+  font-size: xx-large;
 }
 
-.submenuSelected{
-    background-color:#15918E;
+/* line 17, scss/_state.scss */
+.large {
+  font-size: larger;
 }
 
-.submenuSpacer{
-    position:relative;
-    display:inline-block;
-    *display:inline;
-    Margin:0px 10px 0px 0px;
-    width:1px;
-    height:16px;
-    background-image:url(/images/Margin.bmp);
+/* line 22, scss/_state.scss */
+.white {
+  color: white;
 }
 
-.clear{
-    clear:both;
+/* line 27, scss/_state.scss */
+.bold {
+  font-weight: bolder;
 }
 
-#nsfinfo{
-    float:right;
-    margin:9px 9px 16px 0px;
+/* line 32, scss/_state.scss */
+.clear {
+  clear: all;
 }
 
-#nsfText{
-    margin:15px 5px 0px 9px;
-    float:right;
+/* line 2, scss/_adbc-old.scss */
+.icon {
+  display: inline-block;
+  position: relative;
+  width: 32px;
+  height: 32px;
 }
 
-#nsfLogo{
-    display:inline-block;
-    *display:inline;
-    width:48px;
-    Height:48px;
-    background-image:url(/images/BW_small_NSF.png);
-    background-repeat:no-repeat;
+/* line 10, scss/_adbc-old.scss */
+.download {
+  background-image: url("images/download.png");
 }
 
-
-
+/* line 15, scss/_adbc-old.scss */
 .style1 {
-    font-family: Arial, Helvetica, sans-serif
+  font-family: Arial, Helvetica, sans-serif;
 }
 
+/* line 20, scss/_adbc-old.scss */
 .style3 {
-    font-family: Arial, Helvetica, sans-serif; font-weight: bold;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
 }
 
+/* line 25, scss/_adbc-old.scss */
 .style5 {
-    font-weight: bold
+  font-weight: bold;
 }
 
+/* line 30, scss/_adbc-old.scss */
 .style6 {
-    font-family: Arial, Helvetica, sans-serif;
-    font-style: italic;
-    font-weight: bold;
-    font-size: medium;
+  font-family: Arial, Helvetica, sans-serif;
+  font-style: italic;
+  font-weight: bold;
+  font-size: medium;
 }

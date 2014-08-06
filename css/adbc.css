@@ -20,7 +20,6 @@ body {
   position: relative;
   padding: 5px;
   background-color: #fff;
-  text-align: center;
   height: 100%;
 }
 
@@ -241,4 +240,25 @@ ul.inline-menu li {
   font-style: italic;
   font-weight: bold;
   font-size: medium;
+}
+
+/* line 3, scss/_forms.scss */
+label {
+  display: block;
+}
+
+/* line 13, scss/_forms.scss */
+input[type="radio"] + label,
+input[type="checkbox"] + label {
+  display: inline-block;
+}
+
+/* line 19, scss/_forms.scss */
+.form-row {
+  margin: 0 0 2em 0;
+}
+
+/* line 25, scss/_forms.scss */
+.required {
+  color: #f00;
 }

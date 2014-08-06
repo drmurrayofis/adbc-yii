@@ -1,0 +1,27 @@
+
+label
+{
+    display: block;
+
+}
+
+// Prevent labels next to radio buttons
+// or checkboxes from falling on their
+// own line thanks to the display: block above.
+input[type="radio"] + label,
+input[type="checkbox"] + label
+{
+    display: inline-block;
+}
+
+
+.form-row
+{
+    margin: 0 0 2em 0;
+}
+
+
+.required
+{
+    color: #f00;
+}

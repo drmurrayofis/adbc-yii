@@ -123,7 +123,10 @@ class Controller extends CController
             $name = isset($topic['name']) ? $topic['name'] : "Unknown name";
             $desc = isset($topic['description']) ? $topic['description'] : "Unknown description";
 
-            $url = $this->createUrl(strtolower($name));
+            // TODO: Document convention
+            $controller_id = strtolower(str_replace(' ', '', $heading));
+            $action_id     = strtolower(str_replace(' ', '', $name));
+            $url = $this->createUrl($controller_id . '/' . $action_id);
 
             $p = CHtml::tag('p', array('class'=>'topic-description'), $desc);
             $a = CHtml::link($name, $url, array('class'=>'topic-name'));

@@ -41,17 +41,79 @@ class Controller extends CController
 	public $breadcrumbs=array();
 
 
+
+    /**
+     * @var string Prefix used for all ADBC form CSS classes 
+     */
+    private $form_css_prefix = 'adbc-form';
+
+
+
+    /**
+     * @var array The configuration used for all forms in ADBC.
+     */
+    protected $form_config = array(
+        'enableAjaxValidation' => true,
+        'enableClientValidation' => false,
+        'method' => 'post',
+    );
+
+
+
     /**
      * Initializes the controller
+     *
+     * @return void
      */
     public function init()
     {
         $this->menu = array(
-            array('label'=>'Database Design', 'url'=>array('/design')),
-            array('label'=>'SQL', 'url'=>array('/sql')),
-            array('label'=>'Transactions', 'url'=>array('/transactions')),
-            array('label'=>'Security', 'url'=>array('/security')),
-            array('label'=>'Info', 'url'=>array('/info')),
+            array('label' => 'Database Design', 'url' => array('/design')),
+            array('label' => 'SQL', 'url' => array('/sql')),
+            array('label' => 'Transactions', 'url' => array('/transactions')),
+            array('label' => 'Security', 'url' => array('/security')),
+            array('label' => 'Info', 'url' => array('/info')),
         );
+    }
+
+
+
+    /**
+     * Starts rendering a form in a view, and returns
+     * the CActiveForm object to be used. You must
+     * call {@link Controller::endFormRender} once
+     * you are done using the form object.
+     *
+     * @return CActiveForm
+     */
+    public function beginFormRender($model)
+    {
+        
+        $this->form_config['errorMessageCssClass'] = $this->form_css_prefix.'-error';
+        $this->form_config['htmlOptions'] = array(
+            'class' => $this->form_css_prefix,
+        );
+
+        $form = $this->beginWidget('CActiveForm', $this->form_config);
+
+        $flash_html_options = array(
+            'class' => $this->form_css_prefix . '-error-summary',
+        );
+
+        echo $form->errorSummary($model, null, null, $flash_html_options);
+
+        return $form;
+    }
+
+
+
+    /**
+     * Closes rendering of a form
+     *
+     * @return void
+     */
+    public function endFormRender()
+    {
+        $this->endWidget();
     }
 }

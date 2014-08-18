@@ -1,0 +1,22 @@
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="survey">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="experience" type="xs:string"/>
+                <xs:element name="gender" type="xs:string"/>
+                <xs:element name="course" type="xs:string"/>
+                <xs:element name="question" minOccurs="0" maxOccurs="27">
+                    <xs:complexType mixed="true">
+                        <xs:attribute name="number" type="xs:string"/>
+                        <xs:attribute name="response" type="xs:string"/>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="comment" minOccurs="0" maxOccurs="4">
+                    <xs:complexType mixed="true">
+                        <xs:attribute name="number" type="xs:string"/>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>

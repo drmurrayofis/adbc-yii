@@ -1,9 +1,16 @@
-/* line 2, scss/_base.scss */
+/* line 4, scss/_base.scss */
 body {
   background-color: #8C7D84;
   background-image: url(/images/BG_tile.png);
   font-family: Helvetica, Arial, sans-serif;
   font-size: smaller;
+}
+
+/* line 12, scss/_base.scss */
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 /* line 2, scss/_layout.scss */
@@ -18,9 +25,8 @@ body {
 /* line 11, scss/_layout.scss */
 #contentWindowContainer {
   position: relative;
-  padding: 5px;
+  padding: 1em;
   background-color: #fff;
-  text-align: center;
   height: 100%;
 }
 
@@ -241,4 +247,58 @@ ul.inline-menu li {
   font-style: italic;
   font-weight: bold;
   font-size: medium;
+}
+
+/* line 2, scss/_forms.scss */
+label {
+  display: block;
+}
+
+/* line 11, scss/_forms.scss */
+input[type="radio"] + label,
+input[type="checkbox"] + label {
+  display: inline-block;
+}
+
+/* line 17, scss/_forms.scss */
+.adbc-form {
+  margin: 0 auto;
+}
+
+/* line 22, scss/_forms.scss */
+.form-row {
+  margin: 0 0 2em 0;
+}
+
+/* line 27, scss/_forms.scss */
+.required {
+  color: #f00;
+}
+
+/* line 2, scss/_survey-table.scss */
+.survey-table {
+  margin: 1em auto;
+}
+
+/* line 7, scss/_survey-table.scss */
+.banded {
+  background: #efefef;
+}
+
+/* line 2, scss/_util.scss */
+.stretch-to-fit {
+  min-width: 100%;
+  height: auto;
+}
+
+/* line 8, scss/_util.scss */
+.scale-to-fit {
+  width: 100%;
+  height: auto;
+}
+
+/* line 14, scss/_util.scss */
+.shrink-to-fit {
+  max-width: 100%;
+  height: auto;
 }

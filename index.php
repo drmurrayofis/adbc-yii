@@ -1,5 +1,7 @@
 <?php
 
+function kill($data) { die(var_dump($data)); }
+
 // change the following paths if necessary
 $yii=dirname(__FILE__).'/../../../usr/local/share/yiiframework/framework/yii.php';
 $config=dirname(__FILE__).'/protected/config/main.php';

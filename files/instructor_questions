@@ -1,0 +1,27 @@
+Students are motivated to use the ADBC courseware during their study of database management.
+The animations improved student understanding of course materials.
+The animations enhanced problem solving skills related to working with database technologies.
+Please rate the following statements using a scale from 1 to Students have the skills to use the ADBC modules.
+I would recommend this courseware to my colleagues who teach database management. 
+The ADBC modules provide real world examples that will help students design databases professionally.
+The modules are relevant to my instructional needs. 
+I prefer the online learning courseware to the face-to-face classroom teaching.
+I found the ADBC courseware to be a valuable learning supplement for students.
+The Database Design module helped me teach how to convert scenarios to E-R diagrams.
+The Database Design module helped me teach how to convert E-R diagrams to tables.
+The Database Design module helped me teach how to identify functional dependencies.
+The Database Design module helped me teach how to normalize tables into third normal form.
+The SQL module helped me teach how to construct basic SQL statements on one table.
+The SQL module helped me teach how to construct SQL statements on multiple tables using joins.
+The SQL module helped me teach how to create, edit and delete tables as well as insert, delete and update data in tables.
+The SQL module helped me teach how to embed SQL within applications.
+The SQL module helped me teach the purpose of stored procedures/functions.
+The Security module helped me teach how SQL injections work.
+The Security module helped me teach how to grant and revoke access to a database resource.
+The Security module helped me teach how to construct a matrix to identify form and report access to database tables.
+The Security module helped me teach how to set row level security.
+The Security module helped me teach the impacts of database inference.
+The Security module helped me teach the various ways database audits can be used to track database table access.
+The Transactions module helped me teach the concepts of database concurrency and record locking.
+The Transactions module helped me teach the use of triggers.
+The Transactions module helped me teach how database recovery may be implemented.

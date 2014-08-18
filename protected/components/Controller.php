@@ -104,6 +104,38 @@ class Controller extends CController
 
         return $form;
     }
+    
+
+    /**
+     * Returns HTML containing topics in a SMOD.
+     * 
+     * @param string $heading Contents of a leading <h1> tag.
+     * @param array $topics Associative array of topics with child keys "name" and "description"
+     * @return string
+     */
+    function renderTopicsBlock($heading, $topics = array())
+    {
+        $h1 = CHtml::tag('h1', array('class'=>'topics-heading'), $heading);
+
+        $lis = "";
+        foreach ($topics as $topic)
+        {
+            $name = isset($topic['name']) ? $topic['name'] : "Unknown name";
+            $desc = isset($topic['description']) ? $topic['description'] : "Unknown description";
+
+            $url = $this->createUrl(strtolower($name));
+
+            $p = CHtml::tag('p', array('class'=>'topic-description'), $desc);
+            $a = CHtml::link($name, $url, array('class'=>'topic-name'));
+
+            $lis .= CHtml::tag('li', array(), $a.$p);
+        }
+
+        $ul = CHtml::tag('ul', array('class'=>'topics-listing'), $lis);
+
+        return CHtml::tag('section', array('class'=>'topic-block'), $h1.$ul);
+    }
+
 
 
 

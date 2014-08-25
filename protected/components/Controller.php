@@ -151,4 +151,23 @@ class Controller extends CController
     {
         $this->endWidget();
     }
+
+
+
+    /**
+     * Registers client scripts needed for all actions
+     *
+     * @return boolean Whether or not the action can continue
+     */
+    public function beforeAction($action)
+    {
+        parent::beforeAction($action);
+
+        $scripts = Yii::app()->clientScript;
+
+        $scripts->registerCoreScript('jquery');
+        $scripts->registerCoreScript('jquery.ui');
+
+        return true;
+    }
 }

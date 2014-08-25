@@ -19,56 +19,64 @@ echo $this->renderTopicsBlock('Interactive SQL', array(
         'name'=>'DML',
         'description'=>'Use SQL to manipulate data.',
     ),
+));
+
+
+
+echo $this->renderTopicsBlock('Basic Queries', array(
     array(
-        'name'=>'Basic Queries - Projection',
+        'name'=>'Projection',
         'description'=>'',
     ),
     array(
-        'name'=>'Basic Queries - Restriction',
+        'name'=>'Restriction',
         'description'=>'',
     ),
     array(
-        'name'=>'Basic Queries - Function',
+        'name'=>'Function',
         'description'=>'',
     ),
     array(
-        'name'=>'Basic Queries - Group By',
+        'name'=>'Group By',
         'description'=>'',
     ),
     array(
-        'name'=>'Basic Queries - Having',
+        'name'=>'Having',
         'description'=>'',
     ),
     array(
-        'name'=>'Basic Queries - Distinct',
+        'name'=>'Distinct',
         'description'=>'',
     ),
     array(
-        'name'=>'Basic Queries - Order By',
+        'name'=>'Order By',
+        'description'=>'',
+    ),
+));
+
+echo $this->renderTopicsBlock('Advanced Queries', array(
+    array(
+        'name'=>'Multiplication',
         'description'=>'',
     ),
     array(
-        'name'=>'Advanced Queries - Multiplication',
+        'name'=>'Join',
         'description'=>'',
     ),
     array(
-        'name'=>'Advanced Queries - Join',
+        'name'=>'Outer Join',
         'description'=>'',
     ),
     array(
-        'name'=>'Advanced Queries - Outer Join',
+        'name'=>'Union',
         'description'=>'',
     ),
     array(
-        'name'=>'Advanced Queries - Union',
+        'name'=>'Intersection',
         'description'=>'',
     ),
     array(
-        'name'=>'Advanced Queries - Intersection',
-        'description'=>'',
-    ),
-    array(
-        'name'=>'Advanced Queries - Difference',
+        'name'=>'Difference',
         'description'=>'',
     ),
     array(
@@ -79,23 +87,26 @@ echo $this->renderTopicsBlock('Interactive SQL', array(
         'name'=>'Materialized Views',
         'description'=>'',
     ),
+));
+
+echo $this->renderTopicsBlock('Misconceptions', array(
     array(
-        'name'=>'Misconception about JOIN',
+        'name'=>'JOIN',
         'description'=>'',
     ),
     array(
-        'name'=>'Misconception about AND',
+        'name'=>'AND',
         'description'=>'',
     ),
     array(
-        'name'=>'Misconception about excluding distinct results',
+        'name'=>'Exclusion',
         'description'=>'',
     ),
 ));
 
 
 
-echo $this->renderTopicsBlock('SQL Pseudocode', array(
+echo $this->renderTopicsBlock('Pseudocode', array(
     array(
         'name'=>'Introduction',
         'description'=>'',
@@ -108,60 +119,64 @@ echo $this->renderTopicsBlock('SQL Pseudocode', array(
         'name'=>'DML',
         'description'=>'Use SQL to manipulate data.',
     ),
+));
+
+
+echo $this->renderTopicsBlock('Basic Query Pseudocode', array(
     array(
-        'name'=>'Basic Queries - Projection',
+        'name'=>'Projection',
         'description'=>'',
     ),
     array(
-        'name'=>'Basic Queries - Restriction',
+        'name'=>'Restriction',
         'description'=>'',
     ),
     array(
-        'name'=>'Basic Queries - Function',
+        'name'=>'Function',
         'description'=>'',
     ),
     array(
-        'name'=>'Basic Queries - Group By',
+        'name'=>'Group By',
         'description'=>'',
     ),
     array(
-        'name'=>'Basic Queries - Having',
+        'name'=>'Having',
         'description'=>'',
     ),
     array(
-        'name'=>'Basic Queries - Distinct',
+        'name'=>'Distinct',
         'description'=>'',
     ),
     array(
-        'name'=>'Basic Queries - Order By',
+        'name'=>'Order By',
+        'description'=>'',
+    ),
+));
+
+
+echo $this->renderTopicsBlock('Advanced Query Pseudocode', array(
+    array(
+        'name'=>'Multiplication',
         'description'=>'',
     ),
     array(
-        'name'=>'Advanced Queries - Multiplication',
+        'name'=>'Join',
         'description'=>'',
     ),
     array(
-        'name'=>'Advanced Queries - Join',
+        'name'=>'Outer Join',
         'description'=>'',
     ),
     array(
-        'name'=>'Advanced Queries - Outer Join',
+        'name'=>'Union',
         'description'=>'',
     ),
     array(
-        'name'=>'Advanced Queries - Union',
+        'name'=>'Intersection',
         'description'=>'',
     ),
     array(
-        'name'=>'Advanced Queries - Intersection',
-        'description'=>'',
-    ),
-    array(
-        'name'=>'Advanced Queries - Difference',
-        'description'=>'',
-    ),
-    array(
-        'name'=>'Basic Queries - Projection',
+        'name'=>'Difference',
         'description'=>'',
     ),
     array(

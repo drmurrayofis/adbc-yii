@@ -30,10 +30,6 @@ echo $this->renderTopicsBlock('Scenario to ER', array(
         'description'=>'',
     ),
     array(
-        'name'=>'Phone',
-        'description'=>'',
-    ),
-    array(
         'name'=>'Automobile',
         'description'=>'',
     ),
@@ -71,33 +67,33 @@ echo $this->renderTopicsBlock('ER to Tables', array(
         'description'=>'',
     ),
     array(
-        'name'=>'1:N Binary',
+        'name'=>'1 to N Binary',
         'description'=>'Design a database table that efficiently represents '.
                        'a company\'s departmental employee structure.',
     ),
     array(
-        'name'=>'1:N Unary',
+        'name'=>'1 to N Unary',
         'description'=>'Design a database table that effciently represents '.
                        'the employees and their managers of a company.',
     ),
     array(
-        'name'=>'1:1 Employee',
+        'name'=>'1 to 1 Employee',
         'description'=>'Design a database table structure that will manage '.
                        'the assigned parking spaces of employees.',
     ),
     array(
-        'name'=>'1:1 Faculty',
+        'name'=>'1 to 1 Faculty',
         'description'=>'Design a database table that best associates '.
                        'faculty members with their respective departments.',
     ),
     array(
-        'name'=>'N:N Binary',
+        'name'=>'N to N Binary',
         'description'=>'Design a database table that best associates '.
                        'the employees of a company with the projects '.
                        'that they are working on.',
     ),
     array(
-        'name'=>'N:N Unary',
+        'name'=>'N to N Unary',
         'description'=>'Design a database table that will best represent '.
                        'a company\'s complex project structure.',
     ),
@@ -124,23 +120,23 @@ echo $this->renderTopicsBlock('Managing Anomalies', array(
         'description'=>'Learn about how data can logically determine other data.',
     ),
     array(
-        'name'=>'Normalization scenario - Employees',
+        'name'=>'Normalizing Employees',
         'description'=>'Normalize data on company employees.',
     ),
     array(
-        'name'=>'Normalization scenario - Customers',
+        'name'=>'Normalizing Customers',
         'description'=>'Normalize data on customers.',
     ),
     array(
-        'name'=>'Normalization scenario - Auto theft suspects',
+        'name'=>'Normalizing Auto theft suspects',
         'description'=>'Normalize data on auto theft suspects.',
     ),
     array(
-        'name'=>'Normalization scenario - Properties',
+        'name'=>'Normalizing Properties',
         'description'=>'Normalize data on auto theft suspects.',
     ),
     array(
-        'name'=>'Normalization scenario - Doctor prescriptions',
+        'name'=>'Normalizing Doctor prescriptions',
         'description'=>'Normalize data on doctor prescriptions.',
     ),
     array(

@@ -104,7 +104,28 @@ class Controller extends CController
 
         return $form;
     }
+
+
+
+    /**
+     * Renders all available topics as indexed by selection,
+     * returning the HTML to render.
+     *
+     * @return string HTML
+     */
+    public function renderTopicSelection($selection=array())
+    {
+        $html = "";
+
+        foreach ($selection as $heading => $topics)
+        {
+            $html .= $this->renderTopicsBlock($heading, $topics);
+        }
+
+        return CHtml::tag('div', array('class'=>'accordion'), $html);
+    }
     
+
 
     /**
      * Returns HTML containing topics in a SMOD.
@@ -136,7 +157,7 @@ class Controller extends CController
 
         $ul = CHtml::tag('ul', array('class'=>'topics-listing'), $lis);
 
-        return CHtml::tag('section', array('class'=>'topic-block'), $h1.$ul);
+        return $h1.CHtml::tag('div', array('class'=>'topic-block'), $ul);
     }
 
 
@@ -167,6 +188,15 @@ class Controller extends CController
 
         $scripts->registerCoreScript('jquery');
         $scripts->registerCoreScript('jquery.ui');
+
+        $cssCoreUrl = $scripts->getCoreScriptUrl();
+        $scripts->registerCssFile($cssCoreUrl . '/jui/css/base/jquery-ui.css'); 
+
+        $scripts->registerScript(
+            'accordion',
+            "$('.accordion').accordion({'heightStyle': 'content', collapsible: true});",
+            CClientScript::POS_READY
+        );
 
         return true;
     }

@@ -1,0 +1,30 @@
+@import "compass/layout/sticky-footer";
+
+$zen-column-count: 2;
+$zen-gutter-width: 64px;
+
+@include sticky-footer($footer-height, "#sticky-footer-root", "#sticky-footer-root-end", "footer");
+
+footer
+{
+    background-color: shade(cs-primary(), 70%);
+    color: #fff;
+
+    & a
+    {
+        color: cs-secondary();
+    }
+}
+
+.footer-images
+{
+    text-align: center;
+    position: relative;
+    top: 30px;
+
+    & > li
+    {
+        display: inline;
+        margin: 0 30px;
+    }
+}

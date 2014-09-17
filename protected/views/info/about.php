@@ -1,19 +1,9 @@
 <h1 class="page-title">About Us</h1>
-<figure class="pull-left">
-    <img border="1" src="/images/adbc_murray.jpg">
-    <figcaption>Dr. Meg C. Murray, Principal Investigatori</figcaption>
-</figure>
+<img src="/images/adbc_murray.jpg" class="pull-left floating-image">
 
-<p>Dr. Meg Murray, Professor of Information Systems at Kennesaw State University, has
-extensive experience, both in academe and in industry, in the area of software design, development
-and architecture. Her current work has been in the area of web services and using XML as a medium
-for data exchange and she has been an author and presenter on the technical and societal implications
-of the software paradigm referred to as <span class="nobr">'Software as a Service.'</span></p>
+<p>Dr. Meg Murray, Professor of Information Systems at Kennesaw State University, has extensive experience, both in academe and in industry, in the area of software design, development and architecture. Her current work has been in the area of web services and using XML as a medium for data exchange and she has been an author and presenter on the technical and societal implications of the software paradigm referred to as <span class="nobr">'Software as a Service.'</span></p> 
 
-<p>She developed a model for a healthcare information systems portal to facilitate the exchange of healthcare data
-stored in a variety of backend database systems. She has been a recipient of the KSU College of Science
-and Mathematics Distinguished Teaching Award and has twice been a semifinalist for the Women of the Year
-in Technology in Georgia.</p>
+<p>She developed a model for a healthcare information systems portal to facilitate the exchange of healthcare data stored in a variety of backend database systems. She has been a recipient of the KSU College of Science and Mathematics Distinguished Teaching Award and has twice been a semifinalist for the Women of the Year in Technology in Georgia.</p>
 
 <h2>Students Involved with ADbC</h2>
 <ul>

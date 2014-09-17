@@ -15,3 +15,37 @@
     max-width: 100%;
     height: auto;
 }
+
+.pull-left
+{
+    float: left;
+}
+
+.pull-right
+{
+    float: right;
+}
+
+.clear
+{
+    clear: both;
+}
+
+
+// use on parent elements of %vertical-align
+// to counteract blurry renders.
+%parent-vertical-align
+{
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+}
+
+%vertical-align {
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+

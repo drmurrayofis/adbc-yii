@@ -1,6 +1,18 @@
 .survey-table
 {
     margin: 1em auto;
+    border-spacing: separate;
+
+    th
+    {
+        font-weight: bold;
+        text-align: center;
+    }
+
+    td
+    {
+        @include rhythm(0, 0.5, 0.5);
+    }
 }
 
 .banded

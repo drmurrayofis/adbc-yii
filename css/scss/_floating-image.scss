@@ -1,0 +1,16 @@
+@import "compass/css3/box-shadow";
+
+.floating-image
+{
+    @include box-shadow(4px 4px 12px 0px rgba(50, 50, 50, 0.5));
+}
+
+.floating-image.pull-left
+{
+    margin: 0 12px 4px 0;
+}
+
+.floating-image.pull-right
+{
+    margin: 0 0 4px 12px;
+}

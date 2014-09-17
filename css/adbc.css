@@ -1,70 +1,216 @@
-/* line 4, scss/_base.scss */
+/* line 17, ../../../lib/gems/1.9.1/gems/compass-0.12.7/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+/* line 22, ../../../lib/gems/1.9.1/gems/compass-0.12.7/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+html {
+  line-height: 1;
+}
+
+/* line 24, ../../../lib/gems/1.9.1/gems/compass-0.12.7/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+ol, ul {
+  list-style: none;
+}
+
+/* line 26, ../../../lib/gems/1.9.1/gems/compass-0.12.7/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 28, ../../../lib/gems/1.9.1/gems/compass-0.12.7/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+/* line 30, ../../../lib/gems/1.9.1/gems/compass-0.12.7/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+q, blockquote {
+  quotes: none;
+}
+/* line 103, ../../../lib/gems/1.9.1/gems/compass-0.12.7/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+/* line 32, ../../../lib/gems/1.9.1/gems/compass-0.12.7/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+a img {
+  border: none;
+}
+
+/* line 116, ../../../lib/gems/1.9.1/gems/compass-0.12.7/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
+  display: block;
+}
+
+/* line 5, scss/_base.scss */
 body {
-  background-color: #8C7D84;
-  background-image: url(/images/BG_tile.png);
   font-family: Helvetica, Arial, sans-serif;
-  font-size: smaller;
 }
 
 /* line 12, scss/_base.scss */
+html {
+  overflow-y: scroll;
+}
+
+/* line 17, scss/_base.scss */
 * {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
 
-/* line 2, scss/_layout.scss */
-#main {
-  display: block;
-  zoom: 1;
-  width: 1033px;
-  margin: 0px auto;
-  background-color: #fff;
+/* line 5, scss/_layout.scss */
+.content-container {
+  margin: 30px;
+}
+/* line 46, ../../../lib/gems/1.9.1/gems/zen-grids-1.4/stylesheets/zen/_grids.scss */
+.content-container:before, .content-container:after {
+  content: "";
+  display: table;
+}
+/* line 50, ../../../lib/gems/1.9.1/gems/zen-grids-1.4/stylesheets/zen/_grids.scss */
+.content-container:after {
+  clear: both;
 }
 
-/* line 11, scss/_layout.scss */
-#contentWindowContainer {
-  position: relative;
-  padding: 1em;
-  background-color: #fff;
-  height: 100%;
+/* line 61, ../../../lib/gems/1.9.1/gems/compass-0.12.7/frameworks/compass/stylesheets/compass/typography/_vertical_rhythm.scss */
+* html {
+  font-size: 100%;
 }
 
-/* line 2, scss/_header.scss */
-#header {
-  position: relative;
-  padding: 0px;
-  margin: 0px;
+/* line 64, ../../../lib/gems/1.9.1/gems/compass-0.12.7/frameworks/compass/stylesheets/compass/typography/_vertical_rhythm.scss */
+html {
+  font-size: 16px;
+  line-height: 1.5em;
 }
 
-/* line 9, scss/_header.scss */
-#adbclogo {
+/* line 4, scss/_type.scss */
+h1 {
+  font-size: 5em;
+  line-height: 1.05em;
+}
+
+/* line 9, scss/_type.scss */
+h2 {
+  font-size: 3.5em;
+  line-height: 1.07143em;
+}
+
+/* line 14, scss/_type.scss */
+h3 {
+  font-size: 2em;
+  line-height: 1.125em;
+}
+
+/* line 19, scss/_type.scss */
+p {
+  margin-bottom: 1.5em;
+}
+
+/* line 24, scss/_type.scss */
+ul, ol {
+  margin: 0 0 1.5em 1.5em;
+}
+
+/* line 29, scss/_type.scss */
+ul {
+  list-style-type: disc;
+}
+/* line 33, scss/_type.scss */
+ul > ul {
+  list-style-type: circle;
+}
+
+/* line 39, scss/_type.scss */
+ol {
+  list-style-type: decimal;
+}
+/* line 43, scss/_type.scss */
+ol > ol {
+  list-style-type: lower-alpha;
+}
+
+/* line 4, scss/_header.scss */
+header {
+  background-color: #0772a1;
+  color: #fff;
+  height: 30px;
+}
+/* line 11, scss/_header.scss */
+header > * {
   display: inline-block;
-  margin: 32px 0px 0px 26px;
-  *display: inline;
-  zoom: 1;
-  overflow: hidden;
+  max-height: 30px;
 }
 
-/* line 18, scss/_header.scss */
-#headerText {
-  display: inline-block;
-  *display: inline;
-  position: relative;
-  top: -40px;
-  margin: 11px;
-  zoom: 1;
+/* line 19, scss/_header.scss */
+.logo {
+  padding: 2px 0;
 }
 
-/* line 28, scss/_header.scss */
-#headerTitle {
-  *font-size: 22pt;
-  color: #15918E;
+/* line 24, scss/_header.scss */
+.navbar, .subnav {
+  list-style-type: none;
+  margin: 0;
+}
+/* line 29, scss/_header.scss */
+.navbar > li, .subnav > li {
+  float: left;
+  margin-right: 32px;
+}
+/* line 35, scss/_header.scss */
+.navbar a, .subnav a {
+  color: #fff;
+  text-decoration: none;
+  -webkit-transition-property: color;
+  -moz-transition-property: color;
+  -o-transition-property: color;
+  transition-property: color;
+  -webkit-transition-duration: 0.3s;
+  -moz-transition-duration: 0.3s;
+  -o-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-timing-function: ease-in;
+  -moz-transition-timing-function: ease-in;
+  -o-transition-timing-function: ease-in;
+  transition-timing-function: ease-in;
+}
+/* line 44, scss/_header.scss */
+.navbar a:hover, .subnav a:hover {
+  color: #fbc4ac;
 }
 
-/* line 34, scss/_header.scss */
-#headerSubtitle {
-  color: #A99138;
+/* line 52, scss/_header.scss */
+.subnav {
+  background: #032d3f;
+  line-height: 30px;
+  height: 30px;
+  text-align: right;
+}
+/* line 59, scss/_header.scss */
+.subnav > li {
+  float: none;
+  display: inline;
 }
 
 /* line 2, scss/_nav.scss */
@@ -212,43 +358,6 @@ ul.inline-menu li {
   clear: all;
 }
 
-/* line 2, scss/_adbc-old.scss */
-.icon {
-  display: inline-block;
-  position: relative;
-  width: 32px;
-  height: 32px;
-}
-
-/* line 10, scss/_adbc-old.scss */
-.download {
-  background-image: url("images/download.png");
-}
-
-/* line 15, scss/_adbc-old.scss */
-.style1 {
-  font-family: Arial, Helvetica, sans-serif;
-}
-
-/* line 20, scss/_adbc-old.scss */
-.style3 {
-  font-family: Arial, Helvetica, sans-serif;
-  font-weight: bold;
-}
-
-/* line 25, scss/_adbc-old.scss */
-.style5 {
-  font-weight: bold;
-}
-
-/* line 30, scss/_adbc-old.scss */
-.style6 {
-  font-family: Arial, Helvetica, sans-serif;
-  font-style: italic;
-  font-weight: bold;
-  font-size: medium;
-}
-
 /* line 2, scss/_forms.scss */
 label {
   display: block;
@@ -278,9 +387,22 @@ input[type="checkbox"] + label {
 /* line 2, scss/_survey-table.scss */
 .survey-table {
   margin: 1em auto;
+  border-spacing: separate;
+}
+/* line 7, scss/_survey-table.scss */
+.survey-table th {
+  font-weight: bold;
+  text-align: center;
+}
+/* line 13, scss/_survey-table.scss */
+.survey-table td {
+  margin-top: 0em;
+  padding-top: 0.75em;
+  padding-bottom: 0.75em;
+  margin-bottom: 0em;
 }
 
-/* line 7, scss/_survey-table.scss */
+/* line 19, scss/_survey-table.scss */
 .banded {
   background: #efefef;
 }
@@ -301,4 +423,126 @@ input[type="checkbox"] + label {
 .shrink-to-fit {
   max-width: 100%;
   height: auto;
+}
+
+/* line 20, scss/_util.scss */
+.pull-left {
+  float: left;
+}
+
+/* line 25, scss/_util.scss */
+.pull-right {
+  float: right;
+}
+
+/* line 30, scss/_util.scss */
+.clear {
+  clear: both;
+}
+
+/* line 38, scss/_util.scss */
+header {
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+}
+
+/* line 44, scss/_util.scss */
+header > * {
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+/* line 10, ../../../lib/gems/1.9.1/gems/compass-0.12.7/frameworks/compass/stylesheets/compass/layout/_sticky-footer.scss */
+html, body {
+  height: 100%;
+}
+
+/* line 12, ../../../lib/gems/1.9.1/gems/compass-0.12.7/frameworks/compass/stylesheets/compass/layout/_sticky-footer.scss */
+#sticky-footer-root {
+  clear: both;
+  min-height: 100%;
+  height: auto !important;
+  height: 100%;
+  margin-bottom: -230px;
+}
+/* line 18, ../../../lib/gems/1.9.1/gems/compass-0.12.7/frameworks/compass/stylesheets/compass/layout/_sticky-footer.scss */
+#sticky-footer-root #sticky-footer-root-end {
+  height: 230px;
+}
+
+/* line 20, ../../../lib/gems/1.9.1/gems/compass-0.12.7/frameworks/compass/stylesheets/compass/layout/_sticky-footer.scss */
+footer {
+  clear: both;
+  position: relative;
+  height: 230px;
+}
+
+/* line 9, scss/_footer.scss */
+footer {
+  background-color: #022230;
+  color: #fff;
+}
+/* line 14, scss/_footer.scss */
+footer a {
+  color: #a13607;
+}
+
+/* line 20, scss/_footer.scss */
+.footer-images {
+  text-align: center;
+  position: relative;
+  top: 30px;
+}
+/* line 26, scss/_footer.scss */
+.footer-images > li {
+  display: inline;
+  margin: 0 30px;
+}
+
+/* line 4, scss/_home.scss */
+.home {
+  position: relative;
+  overlay: visible;
+  height: 626px;
+  background-image: url('/../images/home-background.jpg?1410471833');
+  background-position: 50% 0;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+/* line 18, scss/_home.scss */
+.introduction {
+  font-size: 32px;
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: inline-block;
+  max-width: 500px;
+  padding: 8px;
+  position: absolute;
+  text-align: right;
+  top: 50%;
+  right: 30px;
+}
+
+/* line 4, scss/_floating-image.scss */
+.floating-image {
+  -webkit-box-shadow: 4px 4px 12px 0px rgba(50, 50, 50, 0.5);
+  -moz-box-shadow: 4px 4px 12px 0px rgba(50, 50, 50, 0.5);
+  box-shadow: 4px 4px 12px 0px rgba(50, 50, 50, 0.5);
+}
+
+/* line 9, scss/_floating-image.scss */
+.floating-image.pull-left {
+  margin: 0 12px 4px 0;
+}
+
+/* line 14, scss/_floating-image.scss */
+.floating-image.pull-right {
+  margin: 0 0 4px 12px;
 }

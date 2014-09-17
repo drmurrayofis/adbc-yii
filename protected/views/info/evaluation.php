@@ -98,8 +98,7 @@ and 5 is "Strongly Agree." Choose N for "not applicable."</p>
                         'uncheckValue'=>null,
                     ));
 
-                    $htmlOptions = !($j % 2) ? array('class'=>'banded') : array();
-                    $tds .= CHtml::tag('td', $htmlOptions, $radio);
+                    $tds .= CHtml::tag('td', array(), $radio);
                 }
 
                 $htmlOptions = $i % 2 ? array('class'=>'banded') : array();

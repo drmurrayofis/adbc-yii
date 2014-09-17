@@ -1,36 +1,63 @@
-#header
+@import "compass/css3/transition";
+
+header
 {
-    position:relative;
-    padding:0px;
-    margin:0px;
+    background-color: cs-primary();
+    color: #fff;
+    @extend %parent-vertical-align;
+    height: $header-height;
+
+    & > *
+    {
+        @extend %vertical-align;
+        display: inline-block;
+        max-height: $header-height;
+    }
 }
 
-#adbclogo
+.logo
 {
-    display:inline-block;
-    margin:32px 0px 0px 26px;
-    *display:inline;
-    zoom:1;
-    overflow:hidden;
+    padding: 2px 0;
 }
 
-#headerText
+.navbar, .subnav
 {
-    display:inline-block;
-    *display:inline;
-    position:relative;
-    top:-40px;
-    margin:11px;
-    zoom:1;
+    list-style-type: none;
+    margin: 0;
+
+    & > li
+    {
+        float: left;
+        margin-right: $navbar-item-margin;
+    }
+
+    & a 
+    {
+        color: #fff;
+        text-decoration: none;
+        
+        @include transition-property(color);
+        @include transition-duration(0.3s);
+        @include transition-timing-function(ease-in);
+
+        &:hover
+        {
+            color: lighten(cs-secondary(), 50%);
+        }
+    }
 }
 
-#headerTitle
-{
-    *font-size:22pt;
-    color:#15918E;
-}
 
-#headerSubtitle
+.subnav
 {
-    color:#A99138;
+    background: darken(cs-primary(), 20%);
+    line-height: 30px;
+    height: 30px;
+    text-align: right;
+
+    & > li
+    {
+        float: none;
+        display: inline;
+    }
 }

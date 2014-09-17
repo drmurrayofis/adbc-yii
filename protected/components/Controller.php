@@ -176,6 +176,27 @@ class Controller extends CController
 
 
     /**
+     * Returns if the current action displays the home page.
+     *
+     * @return boolean
+     */
+    public function isHomePage()
+    {
+        $default_controller = Yii::app()->defaultController;
+
+        $a = $this->id === $default_controller;
+        $b = is_null($this->action);
+        if (!$b)
+        {
+            $b = $this->action->id === $this->defaultAction;
+        }
+
+        return $a && $b;
+    }
+
+
+
+    /**
      * Registers client scripts needed for all actions
      *
      * @return boolean Whether or not the action can continue
@@ -194,7 +215,11 @@ class Controller extends CController
 
         $scripts->registerScript(
             'accordion',
-            "$('.accordion').accordion({'heightStyle': 'content', collapsible: true});",
+            "$('.accordion').accordion({
+                heightStyle: 'content',
+                    collapsible: true,
+                    active: false
+            });",
             CClientScript::POS_READY
         );
 

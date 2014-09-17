@@ -1,0 +1,29 @@
+@import "compass/css3";
+
+.home
+{
+    position: relative;
+    overlay: visible;
+    height: 626px;
+    background: {
+        image: image-url("home-background.jpg");
+        position: 50% 0;
+    };
+
+    @include background-size(cover);
+}
+
+
+.introduction
+{
+    font-size: $base-font-size * 2;
+    color: #fff;
+    background-color: rgba(0,0,0,0.5);
+    display: inline-block;
+    max-width: 500px;
+    padding: 8px;
+    position: absolute;
+    text-align: right;
+    top: 50%;
+    right: 30px;
+}

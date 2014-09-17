@@ -1,11 +1,16 @@
+@import "compass/reset";
 @import "compass/css3/box-sizing";
 
 body
 {
-    background-color:#8C7D84;
-    background-image:url(/images/BG_tile.png);
-    font-family:Helvetica, Arial, sans-serif;
-    font-size:smaller;
+    font-family: Helvetica, Arial, sans-serif;
+}
+
+// force scrollbar to prevent
+// offset for pages of varied height
+html
+{
+    overflow-y: scroll; 
 }
 
 *

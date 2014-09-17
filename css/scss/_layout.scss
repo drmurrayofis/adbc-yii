@@ -1,16 +1,8 @@
-#main
-{
-    display:block;
-    zoom:1;
-    width:$workspace-width;
-    margin:0px auto;
-    background-color:#fff;
-}
+$zen-column-count: 12;
+$zen-gutter-width: 64px;
 
-#contentWindowContainer
+.content-container
 {
-    position:relative;
-    padding:1em;
-    background-color:#fff;
-    height:100%;
+    margin: 30px;
+    @include zen-grid-container;
 }

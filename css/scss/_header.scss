@@ -1,10 +1,15 @@
 @import "compass/css3/transition";
 
+// Contains navigation and branding.
+// Colored according to primary color of scheme,
+// but note that the color property presumes the
+// background color will contrast with white.
 header
 {
+    @extend %parent-vertical-align;
+
     background-color: cs-primary();
     color: #fff;
-    @extend %parent-vertical-align;
     height: $header-height;
 
     & > *
@@ -15,11 +20,19 @@ header
     }
 }
 
+
+
+// ADBC logo located in left of .navbar
+// This should be the first child of <header>
 .logo
 {
-    padding: 2px 0;
+    margin: 2px 0 0 12px;
 }
 
+
+
+// Basically horizontal lists of links.
+// Define link spacing in _config.scss
 .navbar, .subnav
 {
     list-style-type: none;
@@ -40,6 +53,9 @@ header
         @include transition-duration(0.3s);
         @include transition-timing-function(ease-in);
 
+        // Note that changing the color scheme may mess this up!
+        // This works fine in complementary schemes where
+        // the background is darker.
         &:hover
         {
             color: lighten(cs-secondary(), 50%);
@@ -48,6 +64,10 @@ header
 }
 
 
+// Contrary to the name of this file, .subnav
+// needs to appear below <header> in order
+// to not violate the layout of the primary
+// navbar.
 .subnav
 {
     background: darken(cs-primary(), 20%);

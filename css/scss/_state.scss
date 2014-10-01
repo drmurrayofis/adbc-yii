@@ -3,32 +3,12 @@
     clear:both;
 }
 
-.selected
+.topic-not-started
 {
-    background-color:#FBB03B;
+    color: #f00 !important;
 }
 
-.larger
+.topic-in-progress
 {
-    font-size:xx-large;
-}
-
-.large
-{
-    font-size:larger;
-}
-
-.white
-{
-    color:white;
-}
-
-.bold
-{
-    font-weight:bolder;
-}
-
-.clear
-{
-    clear:all;
+    color: #3Af !important;
 }

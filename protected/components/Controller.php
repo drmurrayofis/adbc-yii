@@ -143,6 +143,8 @@ class Controller extends CController
         {
             $name = isset($topic['name']) ? $topic['name'] : "Unknown name";
             $desc = isset($topic['description']) ? $topic['description'] : "Unknown description";
+            $class = 'topic-name' . (isset($topic['class']) ? (" ".$topic['class']) : '');
+
 
             // TODO: Document convention
             $controller_id = strtolower(str_replace(' ', '', $heading));
@@ -150,7 +152,7 @@ class Controller extends CController
             $url = $this->createUrl($controller_id . '/' . $action_id);
 
             $p = CHtml::tag('p', array('class'=>'topic-description'), $desc);
-            $a = CHtml::link($name, $url, array('class'=>'topic-name'));
+            $a = CHtml::link($name, $url, array('class'=>$class));
 
             $lis .= CHtml::tag('li', array(), $a.$p);
         }

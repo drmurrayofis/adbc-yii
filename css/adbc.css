@@ -329,33 +329,13 @@ ul.inline-menu li {
 }
 
 /* line 7, scss/_state.scss */
-.selected {
-  background-color: #FBB03B;
+.topic-not-started {
+  color: #f00 !important;
 }
 
 /* line 12, scss/_state.scss */
-.larger {
-  font-size: xx-large;
-}
-
-/* line 17, scss/_state.scss */
-.large {
-  font-size: larger;
-}
-
-/* line 22, scss/_state.scss */
-.white {
-  color: white;
-}
-
-/* line 27, scss/_state.scss */
-.bold {
-  font-weight: bolder;
-}
-
-/* line 32, scss/_state.scss */
-.clear {
-  clear: all;
+.topic-in-progress {
+  color: #3Af !important;
 }
 
 /* line 2, scss/_forms.scss */

@@ -11,7 +11,8 @@
         <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon">
     </head>
     <body>
-    <div id="sticky-footer-root" class="<?php echo ($this->isHomePage()) ? 'home' : ''; ?>">
+    <div id="sticky-footer-root"
+         class="hidden-phone<?php echo ($this->isHomePage()) ? ' home' : ''; ?>">
             <header>
                 <a href="/"><img src="/images/adbc.png"
                      alt="Animated Database Courseware logo"
@@ -47,7 +48,7 @@
             ?>
             <div id="sticky-footer-root-end"></div>
         </div>
-        <footer>
+        <footer class="hidden-phone">
             <ul class="footer-images">
                 <li>
                 <a href="http://www.nsf.gov/awardsearch/showAward?AWD_ID=0717707"><img src="/images/nsf-logo.png"
@@ -60,5 +61,9 @@
                 </li>
             </ul>
         </footer>
+        <div class="visible-phone mobile-denial-message">
+            <p>Oops! ADbC is not meant to be used on small displays. Please use a laptop,
+            desktop or tablet to use this application.</p>
+        </div>
     </body>
 </html>

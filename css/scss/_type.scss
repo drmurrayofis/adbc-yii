@@ -5,11 +5,13 @@
 
 h1
 {
+    margin: 1em 0 0.5em 0;
     @include adjust-font-size-to($base-font-size * 5);
 }
 
 h2
 {
+    margin: 1em 0 0.2em 0;
     @include adjust-font-size-to($base-font-size * 3.5);
 }
 
@@ -48,12 +50,15 @@ ol
     }
 }
 
+pre, code, .sql-table
+{
+    font-family: 'Source Code Pro', monospace;
+}
 
 pre, code
 {
     background: $code-bg-color;
     color: $code-fg-color;
-    font-family: 'Source Code Pro', monospace;
 }
 
 // Code block.

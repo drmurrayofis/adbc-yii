@@ -1,0 +1,23 @@
+.sql-table
+{
+    th
+    {
+        background-color: cs-primary();
+        color: #fff;
+        text-align: center;
+    }
+
+    td
+    {
+        text-align: right;
+    }
+
+    th,td
+    {
+        padding: rhythm(0.5);
+        border: darken(cs-primary(), 20%) 1px solid;
+    }
+
+    margin: rhythm(1);
+    border-collapse: collapse;
+}

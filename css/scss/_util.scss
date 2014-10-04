@@ -31,6 +31,11 @@
     clear: both;
 }
 
+.hidden
+{
+    display: none;
+}
+
 
 // use on parent elements of %vertical-align
 // to counteract blurry renders.
@@ -47,5 +52,69 @@
   -webkit-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
+}
+
+
+// used for both tablet and desktop displays
+@media only screen and (min-width: $tablet-trigger)
+{
+    .visible-phone
+    {
+        display: none;
+    }
+
+    .hidden-phone
+    {
+    }
+
+    .visible-tablet
+    {
+    }
+
+    .hidden-tablet
+    {
+        display: none;
+    }
+
+    .visible-desktop
+    {
+    }
+
+    .hidden-desktop
+    {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: $tablet-trigger)
+{
+    .visible-phone
+    {
+    }
+
+    .hidden-phone
+    {
+        display: none;
+    }
+
+    .visible-tablet
+    {
+        display: none;
+    }
+
+    .hidden-tablet
+    {
+        display: none;
+    }
+
+    .visible-desktop
+    {
+        display: none;
+    }
+
+    .hidden-desktop
+    {
+        display: none;
+    }
 }
 

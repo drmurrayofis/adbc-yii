@@ -2,16 +2,6 @@
 
 class PseudocodeController extends Controller
 {
-	public function actionDdl()
-	{
-		$this->render('ddl');
-	}
-
-	public function actionDml()
-	{
-		$this->render('dml');
-	}
-
 	public function actionIndex()
 	{
 		$this->render('index');

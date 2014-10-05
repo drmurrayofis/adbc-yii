@@ -12,16 +12,6 @@ echo $this->renderTopicSelection(array(
             'name'=>'Introduction',
             'description'=>'',
         ),
-        array(
-            'name'=>'DDL',
-            'description'=>'Use SQL to define databases and tables.',
-            'class'=>'',
-        ),
-        array(
-            'name'=>'DML',
-            'description'=>'Use SQL to manipulate data.',
-            'class'=>'',
-        ),
     ),
 
 

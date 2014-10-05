@@ -18,7 +18,6 @@ echo $this->renderTopicSelection(array(
         array(
             'name'=>'Introduction',
             'description'=>'',
-            'class'=>'topic-not-started',
         ),
         array(
             'name'=>'Employee',
@@ -70,7 +69,6 @@ echo $this->renderTopicSelection(array(
         array(
             'name'=>'Introduction',
             'description'=>'',
-            'class'=>'topic-not-started',
         ),
         array(
             'name'=>'1 to N Binary',
@@ -114,7 +112,6 @@ echo $this->renderTopicSelection(array(
         array(
             'name'=>'Introduction',
             'description'=>'',
-            'class'=>'topic-not-started',
         ),
         array(
             'name'=>'Basics of Normalization',

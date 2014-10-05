@@ -11,7 +11,6 @@ echo $this->renderTopicSelection(array(
         array(
             'name'=>'Introduction',
             'description'=>'',
-            'class'=>'topic-not-started',
         ),
         array(
             'name'=>'Lost Update',
@@ -79,7 +78,6 @@ echo $this->renderTopicSelection(array(
         array(
             'name'=>'Introduction',
             'description'=>'',
-            'class'=>'topic-not-started',
         ),
         array(
             'name'=>'Logical and Physical Updates',

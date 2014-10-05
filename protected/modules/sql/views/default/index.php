@@ -11,17 +11,16 @@ echo $this->renderTopicSelection(array(
         array(
             'name'=>'Introduction',
             'description'=>'',
-            'class'=>'topic-in-progress',
         ),
         array(
             'name'=>'DDL',
             'description'=>'Use SQL to define databases and tables.',
-            'class'=>'topic-not-started',
+            'class'=>'',
         ),
         array(
             'name'=>'DML',
             'description'=>'Use SQL to manipulate data.',
-            'class'=>'topic-not-started',
+            'class'=>'',
         ),
     ),
 
@@ -132,7 +131,6 @@ echo $this->renderTopicSelection(array(
         array(
             'name'=>'Introduction',
             'description'=>'',
-            'class'=>'topic-not-started',
         ),
         array(
             'name'=>'DDL',
@@ -235,7 +233,6 @@ echo $this->renderTopicSelection(array(
         array(
             'name'=>'Introduction',
             'description'=>'',
-            'class'=>'topic-not-started',
         ),
         array(
             'name'=>'Reading data',
@@ -257,7 +254,6 @@ echo $this->renderTopicSelection(array(
         array(
             'name'=>'Introduction',
             'description'=>'',
-            'class'=>'topic-not-started',
         ),
         array(
             'name'=>'Procedures',
@@ -300,7 +296,6 @@ echo $this->renderTopicSelection(array(
         array(
             'name'=>'Introduction',
             'description'=>'',
-            'class'=>'topic-not-started',
         ),
         array(
             'name'=>'Update',

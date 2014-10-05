@@ -11,7 +11,6 @@ echo $this->renderTopicSelection(array(
         array(
             'name'=>'Introduction',
             'description'=>'',
-            'class'=>'topic-not-started',
         ),
         array(
             'name'=>'Grant',
@@ -31,7 +30,6 @@ echo $this->renderTopicSelection(array(
         array(
             'name'=>'Introduction',
             'description'=>'',
-            'class'=>'topic-not-started',
         ),
         array(
             'name'=>'Sample Matrix',
@@ -46,7 +44,6 @@ echo $this->renderTopicSelection(array(
         array(
             'name'=>'Introduction',
             'description'=>'',
-            'class'=>'topic-not-started',
         ),
         array(
             'name'=>'Interactive Scenario',
@@ -61,7 +58,6 @@ echo $this->renderTopicSelection(array(
         array(
             'name'=>'Introduction',
             'description'=>'',
-            'class'=>'topic-not-started',
         ),
         array(
             'name'=>'Example scenario I',
@@ -91,7 +87,6 @@ echo $this->renderTopicSelection(array(
         array(
             'name'=>'Introduction',
             'description'=>'',
-            'class'=>'topic-not-started',
         ),
         array(
             'name'=>'Example scenario I',
@@ -116,7 +111,6 @@ echo $this->renderTopicSelection(array(
         array(
             'name'=>'Introduction',
             'description'=>'',
-            'class'=>'topic-not-started',
         ),
         array(
             'name'=>'Audit Login',

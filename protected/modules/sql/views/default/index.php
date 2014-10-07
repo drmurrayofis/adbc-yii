@@ -21,9 +21,6 @@ echo $this->renderTopicSelection(array(
             'description'=>'Use SQL to manipulate data.',
         ),
     ),
-
-
-
     'Basic Queries' => array(
         array(
             'name'=>'Projection',

@@ -15,12 +15,10 @@ echo $this->renderTopicSelection(array(
         array(
             'name'=>'DDL',
             'description'=>'Use SQL to define databases and tables.',
-            'class'=>'topic-not-started',
         ),
         array(
             'name'=>'DML',
             'description'=>'Use SQL to manipulate data.',
-            'class'=>'topic-not-started',
         ),
     ),
 
@@ -30,7 +28,6 @@ echo $this->renderTopicSelection(array(
         array(
             'name'=>'Projection',
             'description'=>'',
-            'class'=>'topic-not-started',
         ),
         array(
             'name'=>'Restriction',

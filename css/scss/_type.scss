@@ -50,12 +50,12 @@ ol
     }
 }
 
-pre, code, .sql-table
+pre, code, .sql-table, .sql-editor > textarea
 {
     font-family: 'Source Code Pro', monospace;
 }
 
-pre, code
+pre, code, .sql-editor > textarea
 {
     background: $code-bg-color;
     color: $code-fg-color;
@@ -76,3 +76,4 @@ p > code, li > code
     // Offers correction to v. rhythm
     @include adjust-font-size-to($base-font-size - 2);
 }
+

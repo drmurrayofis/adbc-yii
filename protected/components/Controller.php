@@ -209,22 +209,46 @@ class Controller extends CController
 
         $scripts = Yii::app()->clientScript;
 
-        $scripts->registerCoreScript('jquery');
-        $scripts->registerCoreScript('jquery.ui');
+        $scripts->registerScriptFile('//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js');
+        $scripts->registerScriptFile('//ajax.googleapis.com/ajax/libs/jqueryui/1.11.1/jquery-ui.min.js');
 
-        $cssCoreUrl = $scripts->getCoreScriptUrl();
-        $scripts->registerCssFile($cssCoreUrl . '/jui/css/base/jquery-ui.css'); 
+        $scripts->registerScriptFile('/js/adbc.js', CClientScript::POS_HEAD);
+        $scripts->registerScriptFile('/js/worker.sql.js', CClientScript::POS_HEAD);
+
+        $scripts->registerCssFile('//ajax.googleapis.com/ajax/libs/jqueryui/1.11.1/themes/smoothness/jquery-ui.css'); 
 
         $scripts->registerScript(
-            'accordion',
+            'ui-common',
             "$('.accordion').accordion({
                 heightStyle: 'content',
                     collapsible: true,
                     active: false
-            });",
+            });
+    
+            ", 
             CClientScript::POS_READY
         );
 
         return true;
+    }
+
+
+    /**
+     * Returns an HTML SQL editor
+     */
+    public function getSqlEditor($db_name, $default_code = '')
+    {
+        $output   = CHtml::tag('output', array(), '');
+        $textarea = CHtml::tag('textarea', array(), $default_code);
+        $link     = CHtml::link('Run', '#', array('class'=>'sql-editor-execute'));
+
+        return CHtml::tag(
+            'div',
+            array(
+                'class' => 'sql-editor',
+                'data-base-name' => $db_name
+            ),
+            $textarea.$output.$link
+        );
     }
 }

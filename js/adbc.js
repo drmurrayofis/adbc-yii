@@ -171,5 +171,7 @@ $(function(){
         {
             throw db_name + " has no associated worker";
         }
+
+        return false; // prevents scrolling to top
     });
 });

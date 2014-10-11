@@ -57,7 +57,7 @@ function loadDb(name)
 
     var xhr = new XMLHttpRequest();
 
-    xhr.open('GET', '/files/' + name + '.sqlite', true);
+    xhr.open('GET', '/files/databases/' + name + '.sqlite', true);
     xhr.responseType = 'arraybuffer';
 
     xhr.onload = function(e)

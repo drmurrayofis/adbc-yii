@@ -234,10 +234,20 @@ class Controller extends CController
 
 
     /**
-     * Returns an HTML SQL editor
+     * Returns an HTML SQL editor that modifies a client-side copy
+     * of a SQLite3 database delivered from the server.
+     *
+     * @param $db_name string Name of the SQLite3 database. If null, will be set to the current route.
+     * @param $default_code string Preformatted code to place inside the textarea of the editor
+     * @return string HTML for an editor
      */
     public function getSqlEditor($db_name, $default_code = '')
     {
+        if (is_null($db_name))
+        {
+            $db_name = $this->getRoute();
+        }
+
         $output   = CHtml::tag('output', array(), '');
         $textarea = CHtml::tag('textarea', array(), $default_code);
         $link     = CHtml::link('Run', '#', array('class'=>'sql-editor-execute'));

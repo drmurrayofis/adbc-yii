@@ -6,9 +6,13 @@ $this->breadcrumbs=array(
 	'Restriction',
 );
 ?>
-<h1><?php echo $this->id . '/' . $this->action->id; ?></h1>
 
-<p>
-	You may change the content of this page by modifying
-	the file <tt><?php echo __FILE__; ?></tt>.
-</p>
+<h2>Restriction</h2>
+<p>Restriction is a relational algebra operation in SQL that returns only those rows of data
+that meet specified selection criteria. It is implemented using the <code>WHERE</code> clause
+of the <code>SELECT</code> statement.</p>
+
+<?php
+echo $this->getSqlEditor(null, "SELECT * FROM PET WHERE species = 'Dog'; -- what pets are dogs?
+SELECT * FROM PET WHERE altered='Yes'; -- what pets have been altered?");
+?>

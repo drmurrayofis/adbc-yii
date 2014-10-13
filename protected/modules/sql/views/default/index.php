@@ -29,32 +29,26 @@ echo $this->renderTopicSelection(array(
         array(
             'name'=>'Restriction',
             'description'=>'',
-            'class'=>'topic-not-started',
         ),
         array(
             'name'=>'Function',
             'description'=>'',
-            'class'=>'topic-not-started',
         ),
         array(
             'name'=>'Group By',
             'description'=>'',
-            'class'=>'topic-not-started',
         ),
         array(
             'name'=>'Having',
             'description'=>'',
-            'class'=>'topic-not-started',
         ),
         array(
             'name'=>'Distinct',
             'description'=>'',
-            'class'=>'topic-not-started',
         ),
         array(
             'name'=>'Order By',
             'description'=>'',
-            'class'=>'topic-not-started',
         ),
     ),
 

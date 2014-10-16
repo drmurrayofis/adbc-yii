@@ -31,19 +31,12 @@ function printField($form, $model, $attribute, $type, $choices = null, $htmlopti
     return CHtml::tag('div', array('class'=>'form-row'), $html);
 }
 
-$form = $this->beginFormRender($model);
 ?>
-
-
-
-
-
-
-
 <h1><?php echo ucfirst($model->scenario) . " Evaluation"; ?></h1>
-<h2>Profile information</h2>
 
 <?php
+$form = $this->beginFormRender($model);
+
 // Print questions before survey table.
 $attrs  = $model->attributeNames();
 $config = $model->choices();

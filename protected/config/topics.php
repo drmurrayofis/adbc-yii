@@ -1,7 +1,7 @@
 <?php
 
 return array(
-    'sql'=>array(
+    'SQL'=>array(
         'Interactive SQL' => array(
             'Introduction'=>array(
                 'description'=>'',
@@ -36,7 +36,6 @@ return array(
                 'description'=>'',
            ),
         ),
-
         'Advanced Queries' => array(
             'Multiplication'=>array(
                 'description'=>'',
@@ -71,7 +70,6 @@ return array(
                 'class'=>'topic-not-started',
             ),
         ),
-
         'Misconceptions' => array(
             'JOIN'=>array(
                 'description'=>'',
@@ -86,16 +84,11 @@ return array(
                 'class'=>'topic-not-started',
             ),
         ),
-
-
-
         'Pseudocode' => array(
             'Introduction'=>array(
                 'description'=>'',
             ),
         ),
-
-
         'Basic Query Pseudocode' => array(
             'Projection'=>array(
                 'description'=>'',
@@ -126,8 +119,6 @@ return array(
                 'class'=>'topic-not-started',
             ),
         ),
-
-
         'Advanced Query Pseudocode' => array(
             'Multiplication'=>array(
                 'description'=>'',
@@ -162,9 +153,6 @@ return array(
                 'class'=>'topic-not-started',
             ),
         ),
-
-
-
         'Embedded SQL' => array(
             'Introduction'=>array(
                 'description'=>'',
@@ -181,8 +169,6 @@ return array(
                 'class'=>'topic-not-started',
             ),
         ),
-
-
         'Stored Procedures and Triggers' => array(
             'Introduction'=>array(
                 'description'=>'',
@@ -217,7 +203,6 @@ return array(
                 'class'=>'topic-not-started',
             )
         ),
-
         'Referential Integrity' => array(
             'Introduction'=>array(
                 'description'=>'',
@@ -232,7 +217,7 @@ return array(
             ),
         ),
     ),
-    'design'=>array(
+    'Design'=>array(
         'ER Notations'=>array(
             'Examples'=>array(
                 'description'=>'Observe several ER diagrams of '.
@@ -368,7 +353,7 @@ return array(
             ),
         ),
     ),
-    'transactions'=>array(
+    'Transactions'=>array(
         'Concurrency' => array(
             'Introduction'=>array(
                 'description'=>'',
@@ -422,7 +407,6 @@ return array(
                 'class'=>'topic-not-started',
             ),
         ),
-
         'Recovery' => array(
             'Introduction'=>array(
                 'description'=>'',
@@ -437,7 +421,7 @@ return array(
             ),
         ),
     ),
-    'security'=>array(
+    'Security'=>array(
         'Access Control' => array(
             'Introduction'=>array(
                 'description'=>'',
@@ -451,9 +435,6 @@ return array(
                 'class'=>'topic-not-started',
             ),
         ),
-
-
-
         'Security Matrix' => array(
             'Introduction'=>array(
                 'description'=>'',
@@ -463,9 +444,6 @@ return array(
                 'class'=>'topic-not-started',
             ),
         ),
-
-
-
         'Row Level Security' => array(
             'Introduction'=>array(
                 'description'=>'',
@@ -475,9 +453,6 @@ return array(
                 'class'=>'topic-not-started',
             ),
         ),
-
-
-
         'SQL Injection' => array(
             'Introduction'=>array(
                 'description'=>'',
@@ -499,9 +474,6 @@ return array(
                 'class'=>'topic-not-started',
             ),
         ),
-
-
-
         'Database Inference' => array(
             'Introduction'=>array(
                 'description'=>'',
@@ -519,9 +491,6 @@ return array(
                 'class'=>'topic-not-started',
             ),
         ),
-
-
-
         'Database Auditing' => array(
             'Introduction'=>array(
                 'description'=>'',

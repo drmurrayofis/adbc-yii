@@ -67,13 +67,18 @@ class Controller extends CController
      */
     public function init()
     {
-        $this->menu = array(
-            array('label' => 'Design', 'url' => array('/design')),
-            array('label' => 'SQL', 'url' => array('/sql')),
-            array('label' => 'Transactions', 'url' => array('/transactions')),
-            array('label' => 'Security', 'url' => array('/security')),
-            array('label' => 'Info', 'url' => array('/info')),
-        );
+        $cmods = $this->getCmodNames();
+        $this->menu = array();
+
+        foreach ($cmods as $name)
+        {
+            $this->menu[] = array(
+                'label'=>$name,
+                'url'=>array('/'.$this->nameToId($name))
+            );
+        }
+
+        $this->menu[] = array('label'=>'Info', 'url'=>'/info');
     }
 
 
@@ -117,15 +122,20 @@ class Controller extends CController
     {
         $params = Yii::app()->params['adbcTopics'];
 
-        if (is_null($this->module) || !isset($params[$this->module->id]))
+        if (is_null($this->module))
         {
             return "";
         }
 
-        $selection = $params[$this->module->id];
+        $selection = $this->findNameById($this->module->id, $params);
+
+        if (is_null($selection))
+        {
+            return "";
+        }
+
 
         $html = "";
-
         foreach ($selection as $heading => $topics)
         {
             $html .= $this->renderTopicsBlock($heading, $topics);
@@ -150,7 +160,7 @@ class Controller extends CController
         $lis = "";
         foreach ($topics as $name=>$metadata)
         {
-            $desc = isset($metadata['description']) ? $metadata['description'] : "Unknown description";
+            $desc = isset($metadata['description']) ? $metadata['description'] : "";
             $class = 'topic-name' . (isset($metadata['class']) ? (" ".$metadata['class']) : '');
 
 
@@ -171,6 +181,107 @@ class Controller extends CController
     }
 
 
+    /**
+     * We are in a topic if we are in a module with a currently executing action
+     */
+    public function isInTopic()
+    {
+        return !is_null($this->module) && !is_null($this->action);
+    }
+
+    /**
+     *
+     */
+
+    public function getRelativeTopicNavigation()
+    {
+        if (is_null($this->action))
+        {
+            return "";
+        }
+
+        $mid = $this->module->id;
+        $cid = $this->id;
+        $aid = $this->action->id;
+
+        $cmods = Yii::app()->params['adbcTopics'];
+
+        $smods  = $this->findNameById($mid, $cmods);
+
+        if (is_null($smods))
+        {
+            return "";
+        }
+
+        $topics = $this->findNameById($cid, $smods);
+
+        if (is_null($topics))
+        {
+            return "";
+        }
+
+        $names = array_keys($topics);
+        $ids   = array_map(function($n){ return Controller::nameToId($n); }, $names);
+
+        $index = array_search($aid, $ids);
+
+        $prev_aid = null;
+        $next_aid = null;
+        $links    = "";
+
+        if ($index > 0)
+        {
+            $prev_aid  = $ids[$index - 1];
+            $prev_name = $names[$index - 1];
+            $links .= CHtml::link("&laquo; $prev_name", '/'.$mid.'/'.$cid.'/'.$prev_aid);
+        }
+
+        $links .= CHtml::link('[Index]', '/'.$mid);
+
+        if ($index < (count($ids) - 1))
+        {
+            $next_aid  = $ids[$index + 1];
+            $next_name = $names[$index + 1];
+            $links .= CHtml::link("$next_name &raquo;", '/'.$mid.'/'.$cid.'/'.$next_aid);
+        }
+
+        return CHtml::tag('nav', array('class'=>'topic-relative-nav'), $links);
+    }
+
+    /**
+     *
+     *
+     */
+    public function findNameById($id, $array)
+    {
+        foreach ($array as $k=>$v)
+        {
+            if (Controller::nameToId($k) === $id)
+            {
+                return $v;
+            }
+        }
+
+        return null;
+    }
+
+
+    /**
+     * @return array List of CMOD names
+     */
+    public function getCmodNames()
+    {
+        return array_keys(Yii::app()->params['adbcTopics']);
+    }
+
+    /**
+     * @param $name string A human-readable string containing only single spaces (no newlines, tabs, etc)
+     * @return string An identifier string used for CMOD, SMOD and topic IDs.
+     */
+    public static function nameToId($name)
+    {
+        return strtolower(str_replace(" ", "", $name));
+    }
 
 
     /**

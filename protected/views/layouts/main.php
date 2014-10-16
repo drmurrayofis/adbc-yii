@@ -42,8 +42,13 @@
                     ));
                 }
 
+                if ($this->isInTopic())
+                {
+                    echo $this->getRelativeTopicNavigation();
+                }
 
                 echo $content;
+
 
             ?>
             <div id="sticky-footer-root-end"></div>

@@ -22,13 +22,18 @@ return array(
 		'gii'=>array(
 			'class'=>'system.gii.GiiModule',
 			'password'=>'thenew777',
+            'generatorPaths'=>array(
+                'application.gii'
+            ),
             // Disable ipFilters, or use: 'ipFilters'=>array('YOUR_IP_ADDR','::1'),
             'ipFilters'=>false,
 		),
+        /*
         'design',
         'sql',
         'transactions',
         'security',
+         */
 	),
 
 	// application components

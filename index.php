@@ -1,6 +1,11 @@
 <?php
 
-function kill($data) { die(var_dump($data)); }
+function kill($data)
+{
+    header('Content-type: text/plain');
+    die(var_dump($data));
+}
+
 
 // change the following paths if necessary
 $yii=dirname(__FILE__).'/../../../usr/local/share/yiiframework/framework/yii.php';
@@ -12,4 +17,18 @@ defined('YII_DEBUG') or define('YII_DEBUG',true);
 defined('YII_TRACE_LEVEL') or define('YII_TRACE_LEVEL',3);
 
 require_once($yii);
-Yii::createWebApplication($config)->run();
+class ADBC extends CWebApplication
+{
+    protected function init()
+    {
+        foreach (glob(dirname(__FILE__).'/protected/modules/*', GLOB_ONLYDIR) as $mod)
+        {
+            $this->setModules(array(basename($mod)));
+        }
+        return parent::init();
+    }
+}
+
+
+$app = new ADBC($config);
+$app->run();

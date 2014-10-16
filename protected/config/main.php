@@ -85,5 +85,6 @@ return array(
 	'params'=>array(
 		// this is used in contact page
 		'adminEmail'=>'sage@sagegerard.com',
+        'adbcTopics'=>require(dirname(__FILE__).DIRECTORY_SEPARATOR.'topics.php'),
 	),
 );

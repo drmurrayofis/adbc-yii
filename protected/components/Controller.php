@@ -68,7 +68,7 @@ class Controller extends CController
     public function init()
     {
         $this->menu = array(
-            array('label' => 'Database Design', 'url' => array('/design')),
+            array('label' => 'Design', 'url' => array('/design')),
             array('label' => 'SQL', 'url' => array('/sql')),
             array('label' => 'Transactions', 'url' => array('/transactions')),
             array('label' => 'Security', 'url' => array('/security')),
@@ -113,8 +113,17 @@ class Controller extends CController
      *
      * @return string HTML
      */
-    public function renderTopicSelection($selection=array())
+    public function renderTopicSelection()
     {
+        $params = Yii::app()->params['adbcTopics'];
+
+        if (is_null($this->module) || !isset($params[$this->module->id]))
+        {
+            return "";
+        }
+
+        $selection = $params[$this->module->id];
+
         $html = "";
 
         foreach ($selection as $heading => $topics)
@@ -139,11 +148,10 @@ class Controller extends CController
         $h1 = CHtml::tag('h1', array('class'=>'topics-heading'), $heading);
 
         $lis = "";
-        foreach ($topics as $topic)
+        foreach ($topics as $name=>$metadata)
         {
-            $name = isset($topic['name']) ? $topic['name'] : "Unknown name";
-            $desc = isset($topic['description']) ? $topic['description'] : "Unknown description";
-            $class = 'topic-name' . (isset($topic['class']) ? (" ".$topic['class']) : '');
+            $desc = isset($metadata['description']) ? $metadata['description'] : "Unknown description";
+            $class = 'topic-name' . (isset($metadata['class']) ? (" ".$metadata['class']) : '');
 
 
             // TODO: Document convention
@@ -231,6 +239,7 @@ class Controller extends CController
 
         return true;
     }
+
 
 
     /**

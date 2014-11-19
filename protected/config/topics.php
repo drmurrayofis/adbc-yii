@@ -448,7 +448,6 @@ return array(
             ),
             'Example scenario I'=>array(
                 'description'=>'',
-                'class'=>'topic-not-started',
             ),
             'Example scenario II'=>array(
                 'description'=>'',

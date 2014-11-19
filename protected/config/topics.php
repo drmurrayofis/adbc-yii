@@ -39,35 +39,24 @@ return array(
         'Advanced Queries' => array(
             'Multiplication'=>array(
                 'description'=>'',
-                'class'=>'topic-not-started',
             ),
             'Join'=>array(
                 'description'=>'',
-                'class'=>'topic-not-started',
             ),
             'Outer Join'=>array(
                 'description'=>'',
-                'class'=>'topic-not-started',
             ),
             'Union'=>array(
                 'description'=>'',
-                'class'=>'topic-not-started',
             ),
             'Intersection'=>array(
                 'description'=>'',
-                'class'=>'topic-not-started',
             ),
             'Difference'=>array(
                 'description'=>'',
-                'class'=>'topic-not-started',
             ),
-            'Regular Views'=>array(
+            'Views'=>array(
                 'description'=>'',
-                'class'=>'topic-not-started',
-            ),
-            'Materialized Views'=>array(
-                'description'=>'',
-                'class'=>'topic-not-started',
             ),
         ),
         'Misconceptions' => array(

@@ -22,11 +22,6 @@ class AdvancedqueriesController extends Controller
 		$this->render('join');
 	}
 
-	public function actionMaterializedviews()
-	{
-		$this->render('materializedviews');
-	}
-
 	public function actionMultiplication()
 	{
 		$this->render('multiplication');
@@ -37,9 +32,9 @@ class AdvancedqueriesController extends Controller
 		$this->render('outerjoin');
 	}
 
-	public function actionRegularviews()
+	public function actionViews()
 	{
-		$this->render('regularviews');
+		$this->render('views');
 	}
 
 	public function actionUnion()

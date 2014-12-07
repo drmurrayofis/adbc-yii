@@ -5,6 +5,8 @@
  */
 class InfoController extends Controller
 {
+    public $layout = '//layouts/article';
+
 	/**
      * Present static "About Us" content
 	 */

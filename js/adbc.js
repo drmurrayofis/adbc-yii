@@ -134,7 +134,7 @@ $(function(){
         var db_name;
         var code;
 
-        editor  = $(this).parent();
+        editor  = $(this).parents('.sql-editor');
         db_name = editor.attr('data-base-name');
 
         if (db_name in workers)

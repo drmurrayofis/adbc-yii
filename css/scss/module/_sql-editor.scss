@@ -1,0 +1,71 @@
+@import "compass/css3/transition";
+
+.sql-editor
+{
+    position: relative;
+
+    textarea
+    {
+        border: none;
+        outline: none;
+        resize: none;
+        padding: 4px;
+        position: relative;
+        min-height: $code-editor-height; 
+        width: 100%;
+    }
+
+    output
+    {
+        display: block;
+        width: 100%;
+        max-height: 0;
+        overflow: hidden;
+        padding: 0;
+        margin: 0 0 rhythm(1) 0;
+
+        @include single-transition(max-height, 2s, ease-in-out);
+    }
+
+    .filled
+    {
+        border: #CCC solid 1px;
+        max-height: 10000px;
+        @include single-transition(max-height, 2s, ease-in-out);
+    }
+}
+
+.sql-editor-toolbar
+{
+    height: 30px;
+    background-color: cs-primary();
+}
+
+// Button to execute SQL code.
+.sql-editor-buttons
+{
+    list-style: none;
+    line-height: 30px;
+    margin: 0;
+
+    & > li
+    {
+        @include border-radius(3px);
+        display: inline-block;
+        padding: 0.1em 0.2em;
+        color: #fff;
+        text-decoration: none;
+        border-right: darken(cs-primary(), 20%) 1px solid;
+
+        &:hover
+        {
+            background-color: darken(cs-primary(), 20%);
+        }
+    }
+}
+
+.sql-editor-error
+{
+    color: red;
+    margin: 8px;
+}

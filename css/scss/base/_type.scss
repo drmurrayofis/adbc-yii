@@ -87,3 +87,7 @@ p > code, li > code
     @include adjust-font-size-to($base-font-size - 2);
 }
 
+strong
+{
+    font-weight: bold;
+}

@@ -1,0 +1,44 @@
+.quiz-answers
+{
+    list-style: none;
+    margin: 0;
+
+    & > li
+    {
+        @include border-radius(12px);
+        margin: rhythm(1) 0;
+        padding: rhythm(1);
+        border: cs-primary() solid 1px;
+
+        &.right, &.wrong
+        {
+            color: #fff;
+        }
+
+        &.wrong, &:hover.wrong
+        {
+            background: #A22;
+            border: #A22 solid 1px;
+        }
+
+        &.right, &:hover.right
+        {
+            background: #2A2;
+            border: #2A2 solid 1px;
+        }
+
+        &:hover
+        {
+            cursor: pointer;
+            background: cs-primary();
+            color: #fff;
+        }
+    }
+}
+
+
+.quiz-responses
+{
+    list-style: none;
+    margin: 0;
+}

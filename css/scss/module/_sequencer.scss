@@ -1,0 +1,25 @@
+.sequencer-toolbar
+{
+    @include border-radius(20px);
+    @include user-select(none);
+    background: cs-primary();
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.sequencer-buttons
+{
+    list-style: none;
+    text-align: center;
+    padding: 1em 0;
+
+    & > li
+    {
+        font-size: 1.5rem;
+        display: inline-block;
+        color: #fff;
+        margin: 0 3%; // Prevent buttons from forming a new row on 2 column layout
+        cursor: pointer;
+        @extend %hover-tint-to-secondary;
+    }
+}

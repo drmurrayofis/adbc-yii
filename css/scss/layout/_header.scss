@@ -48,18 +48,7 @@ header
     {
         color: #fff;
         text-decoration: none;
-        
-        @include transition-property(color);
-        @include transition-duration(0.3s);
-        @include transition-timing-function(ease-in);
-
-        // Note that changing the color scheme may mess this up!
-        // This works fine in complementary schemes where
-        // the background is darker.
-        &:hover
-        {
-            color: lighten(cs-secondary(), 50%);
-        }
+        @extend %hover-tint-to-secondary;
     }
 }
 

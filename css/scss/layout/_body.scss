@@ -1,0 +1,25 @@
+$zen-column-count: 12;
+$zen-gutter-width: 64px;
+
+.content-container
+{
+    margin: 30px;
+    @include zen-grid-container;
+}
+
+.big-column
+{
+    margin: 30px;
+    max-width: 800px;
+    @include zen-grid-container;
+}
+
+.left-column
+{
+    @include zen-grid-item(6, 1);
+}
+
+.right-column
+{
+    @include zen-grid-item(6, 6);
+}

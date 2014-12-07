@@ -73,6 +73,7 @@ return array(
                 'class'=>'topic-not-started',
             ),
         ),
+        /*
         'Pseudocode' => array(
             'Introduction'=>array(
                 'description'=>'',
@@ -142,6 +143,7 @@ return array(
                 'class'=>'topic-not-started',
             ),
         ),
+        */
         'Embedded SQL' => array(
             'Introduction'=>array(
                 'description'=>'',

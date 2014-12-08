@@ -1,0 +1,15 @@
+DROP TABLE IF EXISTS CUSTOMERS;
+DROP TABLE IF EXISTS ORDERS;
+
+CREATE TABLE CUSTOMERS(
+    cid CHAR(4),
+    cname VARCHAR(7),
+    city VARCHAR(6),
+    discnt REAL
+);
+
+CREATE TABLE ORDERS(
+    cid CHAR(4),
+    pid CHAR(3),
+    dollars REAL
+);

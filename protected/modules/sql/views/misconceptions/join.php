@@ -5,10 +5,13 @@ $this->breadcrumbs=array(
 	'Misconceptions'=>array('/sql/misconceptions'),
 	'Join',
 );
-?>
-<h1><?php echo $this->id . '/' . $this->action->id; ?></h1>
 
-<p>
-	You may change the content of this page by modifying
-	the file <tt><?php echo __FILE__; ?></tt>.
-</p>
+echo $this->getSqlEditor(null, "SELECT * FROM CUSTOMER, ORDER WHERE ORDER.pid = 'p02';");
+
+?>
+
+<p>This SQL statement is incorrect because it does not contain a <code>JOIN</code> clause. Instead, it results in a multiplication.  Multiplication combines every row from one table with every row from a second table.</p>
+
+<?php
+
+

@@ -11,7 +11,7 @@ $this->breadcrumbs=array(
 
 <?php
 
-echo $this->getSqlEditor(null,
+echo $this->getSqlEditor(
     "-- What are the IDs of the pets registered in the\n".
     "-- PET table that are not from the shelter?\n".
     "SELECT id FROM PET EXCEPT SELECT id FROM SHELTER_ANIMAL;"

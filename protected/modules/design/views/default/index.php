@@ -5,4 +5,4 @@ $this->breadcrumbs=array(
 	$this->module->id,
 );
 
-echo $this->renderTopicSelection();
+echo $this->renderCourseNavigation();

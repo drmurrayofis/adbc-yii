@@ -14,7 +14,7 @@ $this->breadcrumbs=array(
 
 <?php
 
-echo $this->getSqlEditor(null,
+echo $this->getSqlEditor(
     "-- What are the IDs of both the pets and their owners?\n".
     "SELECT PET.id, OWNER.id FROM PET, OWNER WHERE PET.owner = OWNER.id;"
 );

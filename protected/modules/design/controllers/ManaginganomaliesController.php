@@ -4,6 +4,7 @@ class ManaginganomaliesController extends Controller
 {
 	public function actionAnomaliesquiz()
 	{
+        Yii::app()->clientScript->registerScriptFile('/js/quiz.js', CClientScript::POS_END);
 		$this->render('anomaliesquiz');
 	}
 

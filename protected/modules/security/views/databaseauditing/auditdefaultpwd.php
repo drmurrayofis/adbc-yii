@@ -5,10 +5,13 @@ $this->breadcrumbs=array(
 	'Databaseauditing'=>array('/security/databaseauditing'),
 	'Auditdefaultpwd',
 );
-?>
-<h1><?php echo $this->id . '/' . $this->action->id; ?></h1>
 
-<p>
-	You may change the content of this page by modifying
-	the file <tt><?php echo __FILE__; ?></tt>.
-</p>
+$q = $this->beginWidget('Quiz');
+
+$q->question('What is boogie?', 3);
+$q->answer('Bagels', 'Sometimes bats fly into caves.');
+$q->answer('Nine Inch Nails', 'Angst is good for your complexion');
+$q->answer('BBC', '');
+$q->answer('Mt. Fuji', 'Please hug a child');
+
+$this->endWidget();

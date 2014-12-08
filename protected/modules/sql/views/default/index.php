@@ -4,5 +4,3 @@
 $this->breadcrumbs=array(
 	$this->module->id,
 );
-
-echo $this->renderTopicSelection();

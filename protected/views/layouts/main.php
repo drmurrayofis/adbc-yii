@@ -44,7 +44,7 @@
 
                 if ($this->isInTopic())
                 {
-                    echo $this->getRelativeTopicNavigation();
+                    echo $this->renderRelativeNavigation();
                 }
 
                 echo $content;

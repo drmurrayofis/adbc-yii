@@ -6,6 +6,11 @@ function kill($data)
     die(var_dump($data));
 }
 
+function get(&$v, $def=null)
+{
+    return isset($v) ? $v : $def;
+}
+
 
 // change the following paths if necessary
 $yii=dirname(__FILE__).'/../../../usr/local/share/yiiframework/framework/yii.php';

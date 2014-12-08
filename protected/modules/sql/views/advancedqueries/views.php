@@ -11,8 +11,8 @@ $this->breadcrumbs=array(
 <p>SQL Views appear to the end user to be a table. It is only a virtual table however, and is stored internally as an SQL Query. It does share many of the same characteristics as a table in that it has rows and columns and you perform certain updates to the database.</p>
 
 <?php
-echo $this->getSqlEditor(null, "SELECT * FROM EMPLOYEE; -- What is the source data?");
-echo $this->getSqlEditor(null,
+echo $this->getSqlEditor( "SELECT * FROM EMPLOYEE; -- What is the source data?");
+echo $this->getSqlEditor(
     "-- The SELECT query is stored internally for the view.\n".
     "CREATE VIEW MyView AS SELECT name, salary FROM EMPLOYEE WHERE salary >= 70000;"
 );

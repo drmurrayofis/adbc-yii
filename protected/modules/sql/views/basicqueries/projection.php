@@ -17,5 +17,5 @@ $this->breadcrumbs=array(
 
 
 <?php
-echo $this->getSqlEditor(null, "SELECT * FROM PET; -- What is in the PET table?");
-echo $this->getSqlEditor(null, "SELECT name, species, breed FROM PET; -- What are the names, species and breeds in the database?");
+echo $this->getSqlEditor( "SELECT * FROM PET; -- What is in the PET table?");
+echo $this->getSqlEditor( "SELECT name, species, breed FROM PET; -- What are the names, species and breeds in the database?");

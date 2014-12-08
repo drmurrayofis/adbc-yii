@@ -2,45 +2,13 @@
 workers = {};
 activeEditor = null;
 
-/*
-CompositeKeys combines all ordinals of selected <options> into a object
-that represents a composite identifier each time a tracked <select> element
-changes value.
-*/
-function compositeKeys(callback)
-{        
-    if (typeof callback != 'function') {
-        throw new Error("compositeKeys callback is not a function");
-    }
-    
-    var prefix = "keycomp-";
-    var selectables = $('select[id^="'+prefix+'"]');
-    var keys = {};    
-        
-    selectables.change(function() {
-        selectables.each(
-            function(index)
-            {
-                var key = $(this).attr('id').substring(prefix.length);
-                var ordinal = $(this).children(':selected').index();
-                
-                keys[key] = ordinal;
-            }
-        );
-        
-        callback(keys);
-    });
-}
-
-
-
 /**
  * Callback for Worker that reports a SQL error in the active editor
  */
 function onSqlError(e)
 {
-    var output = activeEditor.children('output');
-    output.addClass('sql-editor-error filled');
+    var output = activeEditor.children('.sql-editor-output');
+    output.addClass('sql-editor-error sql-editor-filled-output');
     output.html(e.message);
 }
 
@@ -146,7 +114,7 @@ $(function(){
             worker.onmessage = function(e)
             {
                 var results = e.data.results;
-                var output  = editor.children('output');
+                var output  = editor.children('.sql-editor-output');
 
                 output.removeClass('sql-editor-error');
                 output.html('');
@@ -156,7 +124,7 @@ $(function(){
                     output.append(createSqlTable(results[i].columns, results[i].values));
                 }
 
-                output.addClass('filled');
+                output.addClass('sql-editor-filled-output');
             };
 
             activeEditor = editor;

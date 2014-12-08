@@ -6,7 +6,7 @@ $this->breadcrumbs=array(
 	'Join',
 );
 
-echo $this->getSqlEditor(null, "SELECT * FROM CUSTOMER, ORDER WHERE ORDER.pid = 'p02';");
+echo $this->getSqlEditor( "SELECT * FROM CUSTOMER, ORDER WHERE ORDER.pid = 'p02';");
 
 ?>
 

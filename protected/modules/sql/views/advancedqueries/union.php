@@ -12,7 +12,7 @@ $this->breadcrumbs=array(
 
 <?php
 
-echo $this->getSqlEditor(null,
+echo $this->getSqlEditor(
     "-- What are the names and type (species and breed) of all\n".
     "-- the pets including those registered in the PET table and those in the shelter?\n".
     "SELECT name, species, breed FROM PET UNION\n".

@@ -20,7 +20,7 @@ $this->breadcrumbs=array(
 
 <?php
 
-echo $this->getSqlEditor(null,
+echo $this->getSqlEditor(
     "-- What are the IDs of the pets and their owners,\n".
     "including the IDs of those who do not own a pet?\n".
     "SELECT PET.id, OWNER.id FROM PET LEFT JOIN OWNER ON PET.owner = OWNER.id;"

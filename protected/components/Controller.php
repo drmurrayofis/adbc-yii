@@ -186,11 +186,11 @@ class Controller extends CController
      */
     public function isInTopic()
     {
-        return !is_null($this->module) && !is_null($this->action);
+        return !is_null($this->module) && !is_null($this->action) && $this->id !== "default";
     }
 
     /**
-     *
+     * Returns navigation menu for topics near the current topic.
      */
 
     public function getRelativeTopicNavigation()
@@ -249,8 +249,8 @@ class Controller extends CController
     }
 
     /**
-     *
-     *
+     * Searches an array for a value keyed by a string that, when
+     * converted to an ADbC identifier, matches the $id argument.
      */
     public function findNameById($id, $array)
     {
@@ -328,7 +328,7 @@ class Controller extends CController
 
         $scripts = Yii::app()->clientScript;
 
-        $scripts->registerScriptFile('//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js');
+        $scripts->registerScriptFile('//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js');
         $scripts->registerScriptFile('//ajax.googleapis.com/ajax/libs/jqueryui/1.11.1/jquery-ui.min.js');
 
         $scripts->registerScriptFile('/js/adbc.js', CClientScript::POS_HEAD);
@@ -347,6 +347,11 @@ class Controller extends CController
             ", 
             CClientScript::POS_READY
         );
+
+        if ($this->isInTopic())
+        {
+            $this->layout = '//layouts/column2';
+        }
 
         return true;
     }
@@ -370,7 +375,9 @@ class Controller extends CController
 
         $output   = CHtml::tag('output', array(), '');
         $textarea = CHtml::tag('textarea', array(), $default_code);
-        $link     = CHtml::link('Run', '#', array('class'=>'sql-editor-execute'));
+        $lis      = CHtml::tag('li', array('class'=>'sql-editor-execute icon-flash'), "");
+        $buttons  = CHtml::tag('ul', array('class'=>'sql-editor-buttons'), $lis);
+        $toolbar  = CHtml::tag('div', array('class'=>'sql-editor-toolbar'), $buttons);
 
         return CHtml::tag(
             'div',
@@ -378,7 +385,7 @@ class Controller extends CController
                 'class' => 'sql-editor',
                 'data-base-name' => $db_name
             ),
-            $textarea.$output.$link
+            $toolbar.$textarea.$output
         );
     }
 }

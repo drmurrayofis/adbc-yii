@@ -38,6 +38,9 @@ return array(
 
 	// application components
 	'components'=>array(
+        'liveSql'=>array(
+            'class'=>'LiveSql',
+        ),
 		'user'=>array(
 			// enable cookie-based authentication
 			'allowAutoLogin'=>true,

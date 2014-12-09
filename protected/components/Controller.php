@@ -209,12 +209,14 @@ class Controller extends CController
     {
         parent::beforeAction($action);
 
-        $scripts = Yii::app()->clientScript;
+        $yii = Yii::app();
+
+        $scripts = $yii->clientScript;
 
         $scripts->registerScriptFile('//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js');
         $scripts->registerScriptFile('//ajax.googleapis.com/ajax/libs/jqueryui/1.11.1/jquery-ui.min.js');
 
-        LiveSql::registerClientScripts();
+        $yii->liveSql->registerClientScripts();
 
         $scripts->registerCssFile('//ajax.googleapis.com/ajax/libs/jqueryui/1.11.1/themes/smoothness/jquery-ui.css'); 
 
@@ -232,11 +234,6 @@ class Controller extends CController
             );
         }
 
-        if ($this->isInTopic())
-        {
-            $this->layout = '//layouts/column2';
-        }
-
         return true;
     }
 
@@ -250,6 +247,6 @@ class Controller extends CController
      */
     public function getSqlEditor($code = '')
     {
-        return LiveSql::renderEditor($this->getRoute(), $code);
+        return Yii::app()->liveSql->renderEditor($this->getRoute(), $code);
     }
 }

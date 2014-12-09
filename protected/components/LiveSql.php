@@ -3,18 +3,24 @@
 /**
  * Interface for the LiveSql subsystem.
  */
-class LiveSql
+class LiveSql extends CApplicationComponent
 {
+    public $css_prefix = 'sql-editor';
+
+
+
     /**
      * Registers scripts needed for LiveSQL.
      * Depends on jQuery, but does NOT register it.
      */
-    public static function registerClientScripts()
+    public function registerClientScripts()
     {
         $scripts = Yii::app()->clientScript;
         $scripts->registerScriptFile('/js/worker.sql.js', CClientScript::POS_HEAD);
         $scripts->registerScriptFile('/js/livesql.js', CClientScript::POS_HEAD);
     }
+
+
 
     /**
      * Returns an HTML SQL editor that modifies a client-side copy
@@ -24,7 +30,7 @@ class LiveSql
      * @param $code string SQL to place inside the editor
      * @return string HTML for an editor
      */
-    public static function renderEditor($path, $code = '')
+    public function renderEditor($path, $code = '')
     {
         // Strip first / to prevent confusion over Yii routes.
         // It will be root-relative either way.
@@ -33,19 +39,21 @@ class LiveSql
             $path = ltrim($path, '/');
         }
 
+        $cp = $this->css_prefix;
+
         // holds output table
-        $output   = CHtml::tag('div', array('class'=>'sql-editor-output'), '');
+        $output   = CHtml::tag('div', array('class'=>"${cp}-output"), '');
 
         // holds SQL code
         $textarea = CHtml::tag('textarea', array(), $code);
 
         // render toolbar
-        $lis      = CHtml::tag('li', array('class'=>'sql-editor-execute icon-flash'), '');
-        $buttons  = CHtml::tag('ul', array('class'=>'sql-editor-buttons'), $lis);
-        $toolbar  = CHtml::tag('div', array('class'=>'sql-editor-toolbar'), $buttons);
+        $lis      = CHtml::tag('li', array('class'=>"${cp}-execute icon-flash"), '');
+        $buttons  = CHtml::tag('ul', array('class'=>"${cp}-buttons"), $lis);
+        $toolbar  = CHtml::tag('div', array('class'=>"${cp}-toolbar"), $buttons);
 
         $attrs = array(
-            'class' => 'sql-editor',
+            'class' => $cp,
             'data-base-name' => $path
         );
 

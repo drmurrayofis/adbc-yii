@@ -12,8 +12,9 @@ $this->breadcrumbs=array(
 <p>The <code>ORDER BY</code> clause is used to sort the results of a specified set of attributes (columns).  By default, <code>ORDER BY</code> sorts results in ascending order.  To sort in descending order, the <code>DESC</code> keyword may be added directly after an attribute name.</p>
 
 <?php
-echo $this->getSqlEditor( "SELECT * FROM PET; -- What is the source data?");
-echo $this->getSqlEditor( "-- What are the names, species and breeds of the pets, sorted alphabetically by name?
+$db = "pet";
+echo Yii::app()->liveSql->renderEditor($db, "SELECT * FROM PET; -- What is the source data?");
+echo Yii::app()->liveSql->renderEditor($db, "-- What are the names, species and breeds of the pets, sorted alphabetically by name?
 SELECT name, species, breed FROM PET ORDER BY name;");
-echo $this->getSqlEditor( "-- What are the names of the pets, sorted in reverse alphabetical order?
+echo Yii::app()->liveSql->renderEditor($db, "-- What are the names of the pets, sorted in reverse alphabetical order?
 SELECT name FROM PET ORDER BY name DESC;");

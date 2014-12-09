@@ -13,6 +13,6 @@ that meet specified selection criteria. It is implemented using the <code>WHERE<
 of the <code>SELECT</code> statement.</p>
 
 <?php
-echo $this->getSqlEditor( "SELECT * FROM PET WHERE species='Dog'; -- what pets are dogs?
-SELECT * FROM PET WHERE altered='Yes'; -- what pets have been altered?");
+echo Yii::app()->liveSql->renderEditor("pet", "SELECT * FROM PET WHERE species='Dog'; -- what pets are dogs?
+SELECT * FROM PET WHERE altered='Y'; -- what pets have been altered?");
 ?>

@@ -11,7 +11,7 @@
 main()
 {
     local here=$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )
-    for i in $(find "$here" -name *.sql); do
+    for i in $(find "$here" -name "*.sql"); do
         sqlite3 "${i}ite" < "$i"
     done
 

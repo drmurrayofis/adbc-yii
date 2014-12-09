@@ -6,7 +6,7 @@ $this->breadcrumbs=array(
 	'Join',
 );
 
-echo $this->getSqlEditor( "SELECT * FROM CUSTOMER, ORDER WHERE ORDER.pid = 'p02';");
+echo Yii::app()->liveSql->renderEditor("company", "SELECT * FROM CUSTOMER, ORDER WHERE ORDER.pid = 'p02';");
 
 ?>
 

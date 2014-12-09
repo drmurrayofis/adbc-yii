@@ -14,7 +14,7 @@ $this->breadcrumbs=array(
 
 <?php
 
-echo $this->getSqlEditor(
+echo Yii::app()->liveSql->renderEditor("pet",
     "-- What are the IDs of both the pets and their owners?\n".
     "SELECT PET.id, OWNER.id FROM PET, OWNER WHERE PET.owner = OWNER.id;"
 );

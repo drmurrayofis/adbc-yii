@@ -236,17 +236,4 @@ class Controller extends CController
 
         return true;
     }
-
-
-
-    /**
-     * Returns HTML for an editor in which to practice SQL.
-     *
-     * @param $code string Placeholder code 
-     * @return string HTML for an editor
-     */
-    public function getSqlEditor($code = '')
-    {
-        return Yii::app()->liveSql->renderEditor($this->getRoute(), $code);
-    }
 }

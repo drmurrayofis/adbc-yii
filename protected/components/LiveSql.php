@@ -26,19 +26,12 @@ class LiveSql extends CApplicationComponent
      * Returns an HTML SQL editor that modifies a client-side copy
      * of a SQLite3 database delivered from the server.
      *
-     * @param $path string Webroot-relative to the SQLite3 database, minus the .sqlite extension.
+     * @param $path string Webroot-relative URL to the SQLite3 database file
      * @param $code string SQL to place inside the editor
      * @return string HTML for an editor
      */
     public function renderEditor($path, $code = '')
     {
-        // Strip first / to prevent confusion over Yii routes.
-        // It will be root-relative either way.
-        if ($path[0] == '/')
-        {
-            $path = ltrim($path, '/');
-        }
-
         $cp = $this->css_prefix;
 
         // holds output table
